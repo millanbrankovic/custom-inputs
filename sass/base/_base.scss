@@ -26,7 +26,7 @@ input[type="checkbox"] {
         cursor: pointer;
 
         * {
-            @include transition(all .3s ease);
+            @include transition(all .2s ease);
         }
 
         .check {

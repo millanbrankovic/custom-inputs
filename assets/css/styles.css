@@ -203,10 +203,10 @@ input[type="checkbox"] + label {
   cursor: pointer;
 }
 input[type="checkbox"] + label * {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 input[type="checkbox"] + label .check {
   width: 22px;
