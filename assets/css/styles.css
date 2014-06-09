@@ -176,6 +176,33 @@ sub {
 */
 /*
 |------------------------------------------------------------
+| Mixins
+|------------------------------------------------------------
+*/
+/*
+-- Breakpoint Mixin
+------------------------------------------------------------
+*/
+/*
+-- Vertical Align Mixin
+------------------------------------------------------------
+*/
+/*
+-- Selection Mixin
+------------------------------------------------------------
+*/
+/*
+|------------------------------------------------------------
+| Variables
+|------------------------------------------------------------
+*/
+/*
+|------------------------------------------------------------
+| Functions
+|------------------------------------------------------------
+*/
+/*
+|------------------------------------------------------------
 | Base
 |------------------------------------------------------------
 */
@@ -191,51 +218,36 @@ sub {
   -webkit-tap-highlight-color: black(0);
 }
 
-input[type="checkbox"] {
-  display: none;
-}
-input[type="checkbox"] + label {
-  display: inline-block;
-  position: relative;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  cursor: pointer;
-}
-input[type="checkbox"] + label * {
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-input[type="checkbox"] + label .check {
-  width: 22px;
-  height: 22px;
-  margin: 0 5px 0 0;
-  display: inline-block;
-  vertical-align: middle;
-  border: 1px solid #cacaca;
-  background: #fff;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-}
-input[type="checkbox"] + label .check .ico {
-  top: -4px;
-  left: 1px;
-  opacity: 0;
-  position: absolute;
-  color: #01bffe;
-  font-size: 26px;
+body, html {
+  min-height: 100%;
+  color: #1f2433;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #425a6d;
 }
 
-input[type="checkbox"]:checked + label .check {
-  background: #f1f1f1;
+.header {
+  padding: 0.9375rem 0;
+  background: white;
 }
-input[type="checkbox"]:checked + label .check .ico {
-  opacity: 1;
+
+.header-inner,
+.main-inner {
+  margin: 0.9375rem 0;
+  padding: 0 0.9375rem;
+}
+@media (min-width: 641px) {
+  .header-inner,
+  .main-inner {
+    width: 80%;
+    margin: 1.25rem auto;
+  }
+}
+@media (min-width: 1025px) {
+  .header-inner,
+  .main-inner {
+    width: 1024px;
+  }
 }
 
 /*
@@ -269,4 +281,96 @@ input[type="checkbox"]:checked + label .check .ico {
 
 .ico-checkmark:before {
   content: "\e600";
+}
+
+/*
+|------------------------------------------------------------
+| Helpers
+|------------------------------------------------------------
+*/
+.header-inner:before,
+.main-inner:before, .header-inner:after,
+.main-inner:after {
+  content: "";
+  display: table;
+}
+.header-inner:after,
+.main-inner:after {
+  clear: both;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.main .text, input[type="checkbox"] + label .check {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/*
+|------------------------------------------------------------
+| Modules
+|------------------------------------------------------------
+*/
+/*
+|------------------------------------------------------------
+| Checkboxes
+|------------------------------------------------------------
+*/
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + label {
+  display: inline-block;
+  position: relative;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+input[type="checkbox"] + label * {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+input[type="checkbox"] + label .check {
+  width: 22px;
+  height: 22px;
+  margin: 0 5px 0 0;
+  border: 1px solid #cacaca;
+  background: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+input[type="checkbox"] + label .check .ico {
+  top: -4px;
+  left: 1px;
+  opacity: 0;
+  position: absolute;
+  color: #01bffe;
+  font-size: 26px;
+}
+
+input[type="checkbox"]:checked + label .check {
+  background: #f1f1f1;
+}
+input[type="checkbox"]:checked + label .check .ico {
+  opacity: 1;
 }

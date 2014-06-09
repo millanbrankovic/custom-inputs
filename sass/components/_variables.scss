@@ -1,0 +1,34 @@
+/*
+|------------------------------------------------------------
+| Variables
+|------------------------------------------------------------
+*/
+
+
+
+// Typography
+// --------------------------------------------------
+
+$base-font: Arial, Helvetica, sans-serif;
+$base-font-size: 16px;
+
+
+
+// Colors
+// --------------------------------------------------
+
+$main-color: #1f2433;
+$light-color: #fff;
+$dark-color: #425a6d;
+$green-color: #52b700;
+$blue-color: #048ee0;
+
+
+
+// Media Queries
+// --------------------------------------------------
+
+$screen-small: "max-width: 640px";
+$screen-medium: "min-width: 641px";
+$screen-large: "min-width: 1025px";
+$screen-xlarge: "min-width: 1441px";

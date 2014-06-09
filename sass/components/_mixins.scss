@@ -1,0 +1,58 @@
+/*
+|------------------------------------------------------------
+| Mixins
+|------------------------------------------------------------
+*/
+
+
+/*
+-- Breakpoint Mixin
+------------------------------------------------------------
+*/
+
+@mixin responsive($breakpoint) {
+    @media ($breakpoint) {
+        @content;
+    }
+}
+
+
+/*
+-- Vertical Align Mixin
+------------------------------------------------------------
+*/
+
+@mixin vertical-center-content($child) {
+    font-size: 0;
+
+    &:before {
+        content: "";
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #{$child} {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+
+/*
+-- Selection Mixin
+------------------------------------------------------------
+*/
+
+@mixin selection($color, $background) {
+   $prefixes: ("-moz-", "-webkit-", "-o-", "-ms-", "");
+   @each $prefix in $prefixes {
+      &::#{$prefix}selection {
+        color: $color;
+        background: $background;
+      }
+   }
+}
+
+
+
