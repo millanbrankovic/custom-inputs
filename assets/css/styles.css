@@ -226,11 +226,6 @@ body, html {
   background: #425a6d;
 }
 
-.header {
-  padding: 0.9375rem 0;
-  background: white;
-}
-
 .header-inner,
 .main-inner {
   margin: 0.9375rem 0;
@@ -248,6 +243,11 @@ body, html {
   .main-inner {
     width: 1024px;
   }
+}
+
+.header {
+  padding: 0.9375rem 0;
+  background: white;
 }
 
 /*

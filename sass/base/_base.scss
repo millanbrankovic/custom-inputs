@@ -17,21 +17,6 @@ body, html {
     background: $dark-color;
 }
 
-.header {
-    padding: rem-calc(15 0);
-    background: $light-color;
-}
-
-.main {
-    .text {
-        @extend %v-align;
-    }
-}
-
-.header-inner,
-.main-inner {
-    @extend %inner-content;
-}
 
 %inner-content {
     margin: rem-calc(15 0);
@@ -47,3 +32,23 @@ body, html {
         width: 1024px;
     }
 }
+
+
+.header {
+    padding: rem-calc(15 0);
+    background: $light-color;
+}
+
+
+.main {
+    .text {
+        @extend %v-align;
+    }
+}
+
+.header-inner,
+.main-inner {
+    @extend %inner-content;
+}
+
+
