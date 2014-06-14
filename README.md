@@ -21,7 +21,7 @@ For this examples I was using the following markup:
 ####CSS
 
 ##### Step 1
-Hde hide all the original inputs.
+Hide all the original inputs.
 
 ```
 input[type="checkbox"],
