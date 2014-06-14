@@ -75,7 +75,7 @@ Next step is to target a `.check` class and to be creative as much as we can sin
 The final step and the most important is `:checked` pseudo class.
 
 ```
-&:checked {
+:checked {
 
     + label {
 
