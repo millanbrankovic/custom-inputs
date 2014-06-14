@@ -20,7 +20,7 @@ For this examples I was using the following markup:
 
 ####CSS
 
-###### Step 1
+##### Step 1
 Hde hide all the original inputs.
 
 ```
@@ -30,7 +30,7 @@ input[type="radio"] {
 }
 ```
 
-###### Step 2
+##### Step 2
 Target `label` with an adjacent selector `+`.
 
 ```
@@ -44,8 +44,8 @@ Target `label` with an adjacent selector `+`.
 }
 ```
 
-###### Step 3
-Target a `.check` class and be creative as much as you can since this class will appear instead of default checkbox. If you are going to use icon fonts you need to target appropriate class, in this case I was using an `.ico` class as well.
+##### Step 3
+Next step is to target a `.check` class and to be creative as much as we can since this class will appear instead of default checkbox. If we are going to use icon fonts we need to target appropriate class, in this case I was using an `.ico` class as well.
 
 ```
 .check {
@@ -66,6 +66,32 @@ Target a `.check` class and be creative as much as you can since this class will
     }
 }
 ```
+
+##### Step 4
+The final step and the most important is `:checked` pseudo class.
+
+```
+&:checked {
+
+    + label {
+
+        .check {
+            background: #38393b;
+            box-shadow: 0 1px 0 rgba(#fff, .15), 0 0 3px rgba(#000, .7) inset;
+
+            .ico {
+                opacity: 1;
+            }
+        }
+    }
+}
+```
+
+##### Step 5
+Now it's up to you and your creativity.
+
+
+##### Complete chunk of SASS/COMPASS code 
 
 ```
 input[type="checkbox"],
