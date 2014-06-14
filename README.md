@@ -20,7 +20,8 @@ For this examples I was using the following markup:
 
 ####CSS
 
-###### Step 1 - Hde hide all the original inputs
+###### Step 1
+Hde hide all the original inputs.
 
 ```
 input[type="checkbox"],
@@ -29,7 +30,8 @@ input[type="radio"] {
 }
 ```
 
-###### Step 2 - Target `label` with an adjacent selector `+`
+###### Step 2
+Target `label` with an adjacent selector `+`.
 
 ```
 + label {
@@ -42,7 +44,8 @@ input[type="radio"] {
 }
 ```
 
-###### Step 3 - Target a `.check` class and be creative as much as you can since this class will appear instead of default checkbox. If you are going to use icon fonts you need to target appropriate class, in this case I was using an `.ico` class as well
+###### Step 3
+Target a `.check` class and be creative as much as you can since this class will appear instead of default checkbox. If you are going to use icon fonts you need to target appropriate class, in this case I was using an `.ico` class as well.
 
 ```
 .check {
