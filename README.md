@@ -26,11 +26,52 @@ For this examples I was using the following markup:
 input[type="checkbox"],
 input[type="radio"] {
     display: none;
+}
+```
+
+###### Step 2 - Target `label` with an adjacent selector `+`
+
+```
++ label {
+    @extend %v-align;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    @include user-select;
+    @include transition(all .5s ease);
+}
+```
+
+###### Step 3 - Target a `.check` class and be creative as much as you can since this class will appear instead of default checkbox. If you are going to use icon fonts you need to target appropriate class, in this case I was using an `.ico` class as well
+
+```
+.check {
+    z-index: 2;
+    @extend %v-align;
+    border: $base-border;
+    margin: rem-calc(0 5 0 0);
+    background: $dark-bg;
+    box-shadow: 0 1px 0 rgba(#fff, .15), 0 0 3px rgba(#000, .4) inset;
+
+    .ico {
+        top: 3px;
+        left: 2px;
+        opacity: 0;
+        position: absolute;
+        color: $blue-color;
+        font-size: rem-calc(18);
+    }
+}
+```
+
+```
+input[type="checkbox"],
+input[type="radio"] {
+    display: none;
 
     + label {
         @extend %v-align;
         cursor: pointer;
-        display: inline-block;
         position: relative;
         user-select: none;
         @include user-select;
