@@ -2,4 +2,4 @@
 
 ##### Demo
 
-Demo available <a href="http://millanbrankovic.com/Custom-CSS-Checkboxes" target="_blank">here</a>
+Demo available <a href="http://milanbrankovic.com/Custom-CSS-Checkboxes/" target="_blank">here</a>
