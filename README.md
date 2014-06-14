@@ -5,6 +5,7 @@ Default checkboxes and radio buttons are a quite ugly and aren't friendly custom
 ### The technique under the hood
 
 #####HTML
+For this examples I was using the the following markup:
 
 ```
 <input type="checkbox" name="checkbox" value="value" id="checkme">
@@ -17,8 +18,61 @@ Default checkboxes and radio buttons are a quite ugly and aren't friendly custom
 ```
 
 #####CSS
-
 The first step is to hide all the original inputs by display: none; or visibility: hidden; In this case I was using a display property.
+
+```
+input[type="checkbox"],
+input[type="radio"] {
+    display: none;
+
+    + label {
+        @extend %v-align;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        user-select: none;
+        @include user-select;
+        @include transition(all .5s ease);
+
+        * {
+            @include transition(all .3s ease);
+        }
+
+        .check {
+            z-index: 2;
+            @extend %v-align;
+            border: $base-border;
+            margin: rem-calc(0 5 0 0);
+            background: $dark-bg;
+            box-shadow: 0 1px 0 rgba(#fff, .15), 0 0 3px rgba(#000, .4) inset;
+
+            .ico {
+                top: 3px;
+                left: 2px;
+                opacity: 0;
+                position: absolute;
+                color: $blue-color;
+                font-size: rem-calc(18);
+            }
+        }
+    }
+
+    &:checked {
+
+        + label {
+
+            .check {
+                background: #38393b;
+                box-shadow: 0 1px 0 rgba(#fff, .15), 0 0 3px rgba(#000, .7) inset;
+
+                .ico {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+```
 
 
 ##### Demo
