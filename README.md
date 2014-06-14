@@ -2,6 +2,10 @@
 
 Default checkboxes and radio buttons are a quite ugly and aren't friendly customizable - at least that was the case in the past. Luckily CSS3 offers a good solution - <a href="http://www.w3.org/TR/selectors/#checked" target="_blank">:checked</a> pseudo class.
 
+##### Demo
+
+Demo available <a href="http://milanbrankovic.com/custom-css-checkboxes/" target="_blank">here</a>
+
 ## The technique under the hood
 
 ####HTML
@@ -86,9 +90,6 @@ The final step and the most important is `:checked` pseudo class.
     }
 }
 ```
-
-##### Step 5
-Now it's up to you and your creativity.
 
 
 ##### Complete chunk of SASS/COMPASS code 
