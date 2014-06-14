@@ -219,13 +219,14 @@ sub {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-tap-highlight-color: black(0);
 }
 
 body, html {
   color: white;
   font-size: 1rem;
   font: 16px open_sansregular, Arial, Helvetica, sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -277,12 +278,11 @@ a:hover {
   line-height: 1;
   display: inline-block;
   vertical-align: middle;
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ico-checkmark:before {
+.ico-checkmark::before {
   content: "\e600";
 }
 
@@ -416,7 +416,7 @@ input[type="radio"] + label .check {
   text-align: center;
   background: #425a6d;
 }
-.header h1, .header h2 {
+.header h1, .header p {
   color: #e7c810;
   font: 16px "chalkdusterregular";
   -webkit-transform: rotate(-8deg);
@@ -424,7 +424,12 @@ input[type="radio"] + label .check {
   -ms-transform: rotate(-8deg);
   -o-transform: rotate(-8deg);
   transform: rotate(-8deg);
-  text-shadow: 0 3px 1px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+}
+@media (min-width: 641px) {
+  .header h1, .header p {
+    text-shadow: 0 3px 1px rgba(0, 0, 0, 0.5);
+  }
 }
 .header h1 {
   margin: 3.75rem 0 0;
@@ -449,19 +454,19 @@ input[type="radio"] + label .check {
     top: 2rem;
   }
 }
-.header h2 {
+.header p {
   position: relative;
   font-size: 0.9375rem;
 }
 @media (min-width: 641px) {
-  .header h2 {
+  .header p {
     font-size: 1.0625rem;
   }
 }
 @media (min-width: 1025px) {
-  .header h2 {
-    top: -2.5rem;
-    left: 9.0625rem;
+  .header p {
+    top: -2.1875rem;
+    left: 3.125rem;
     font-size: 1.3125rem;
   }
 }
@@ -544,7 +549,6 @@ input[type="radio"] {
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   cursor: pointer;
-  display: inline-block;
   position: relative;
   user-select: none;
   -moz-user-select: none;
@@ -564,22 +568,13 @@ input[type="radio"] + label * {
 input[type="checkbox"] + label .check,
 input[type="radio"] + label .check {
   z-index: 2;
-}
-
-.default-checkboxes input[type="checkbox"] + label .check {
-  width: 18px;
-  height: 18px;
-  margin: 0 5px 0 0;
   border: 1px solid #252728;
+  margin: 0 0.3125rem 0 0;
   background: #3c3e40;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15), 0 0 3px rgba(0, 0, 0, 0.4) inset;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
 }
-.default-checkboxes input[type="checkbox"] + label .check .ico {
+input[type="checkbox"] + label .check .ico,
+input[type="radio"] + label .check .ico {
   top: 3px;
   left: 2px;
   opacity: 0;
@@ -587,28 +582,36 @@ input[type="radio"] + label .check {
   color: #01bffe;
   font-size: 1.125rem;
 }
-.default-checkboxes input[type="checkbox"]:checked + label .check {
+input[type="checkbox"]:checked + label .check,
+input[type="radio"]:checked + label .check {
   background: #38393b;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15), 0 0 3px rgba(0, 0, 0, 0.7) inset;
 }
-.default-checkboxes input[type="checkbox"]:checked + label .check .ico {
+input[type="checkbox"]:checked + label .check .ico,
+input[type="radio"]:checked + label .check .ico {
   opacity: 1;
+}
+
+.default-checkboxes input[type="checkbox"] + label .check {
+  width: 18px;
+  height: 18px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
 }
 .default-checkboxes input[type="radio"] + label .check {
   width: 18px;
   height: 18px;
-  margin: 0 5px 0 0;
   position: relative;
-  border: 1px solid #252728;
-  background: #3c3e40;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15), 0 0 3px rgba(0, 0, 0, 0.4) inset;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   -ms-border-radius: 100px;
   -o-border-radius: 100px;
   border-radius: 100px;
 }
-.default-checkboxes input[type="radio"] + label .check:before {
+.default-checkboxes input[type="radio"] + label .check::before {
   content: "";
   opacity: 0;
   top: 3px;
@@ -627,10 +630,7 @@ input[type="radio"] + label .check {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.default-checkboxes input[type="radio"]:checked + label .check {
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15), 0 0 3px rgba(0, 0, 0, 0.7) inset;
-}
-.default-checkboxes input[type="radio"]:checked + label .check:before {
+.default-checkboxes input[type="radio"]:checked + label .check::before {
   opacity: 1;
 }
 
@@ -650,6 +650,7 @@ input[type="radio"] + label .check {
   height: 26px;
   top: 2px;
   left: 2px;
+  border: none;
   position: absolute;
   background: white;
   -webkit-border-radius: 4px;
@@ -665,19 +666,19 @@ input[type="radio"] + label .check {
 .sliding-checkboxes input[type="checkbox"]:checked + label .check {
   left: 32px;
 }
-.sliding-checkboxes li:last-child input[type="checkbox"] + label:before, .sliding-checkboxes li:last-child input[type="checkbox"] + label:after {
-  top: 10px;
+.sliding-checkboxes li:last-child input[type="checkbox"] + label::before, .sliding-checkboxes li:last-child input[type="checkbox"] + label::after {
+  top: 9px;
   position: absolute;
   font-weight: 700;
   font-size: 0.625rem;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
 }
-.sliding-checkboxes li:last-child input[type="checkbox"] + label:before {
+.sliding-checkboxes li:last-child input[type="checkbox"] + label::before {
   content: "On";
   left: 6px;
 }
-.sliding-checkboxes li:last-child input[type="checkbox"] + label:after {
+.sliding-checkboxes li:last-child input[type="checkbox"] + label::after {
   content: "Off";
   right: 6px;
   color: #425a6d;
@@ -685,7 +686,7 @@ input[type="radio"] + label .check {
 .sliding-checkboxes li:last-child input[type="checkbox"]:checked + label {
   background: #c4c4c4;
 }
-.sliding-checkboxes li:last-child input[type="checkbox"]:checked + label:before {
+.sliding-checkboxes li:last-child input[type="checkbox"]:checked + label::before {
   color: white;
 }
 .sliding-checkboxes li:last-child input[type="checkbox"]:checked + label .check {

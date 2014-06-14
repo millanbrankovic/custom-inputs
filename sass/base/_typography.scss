@@ -48,13 +48,11 @@
     line-height: 1;
     display: inline-block;
     vertical-align: middle;
-
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
+    @include font-smoothing;
     -moz-osx-font-smoothing: grayscale;
 }
 
-.ico-checkmark:before {
+.ico-checkmark::before {
     content: "\e600";
 }
 

@@ -26,11 +26,15 @@
     text-align: center;
     background: $dark-color;
 
-    h1, h2 {
+    h1, p {
         color: $yellow-color;
         font: $base-font-size $header-heading-font;
         @include transform(rotate(-8deg));
-        text-shadow: 0 3px 1px rgba(#000, .5);
+        text-shadow: 0 2px 1px rgba(#000, .4);
+
+        @include responsive($screen-medium) {
+            text-shadow: 0 3px 1px rgba(#000, .5);
+        }
     }
 
     h1 {
@@ -55,7 +59,7 @@
         }
     }
 
-    h2 {
+    p {
         position: relative;
         font-size: rem-calc(15);
 
@@ -64,8 +68,8 @@
         }
 
         @include responsive($screen-large) {
-            top: rem-calc(-40);
-            left: rem-calc(145);
+            top: rem-calc(-35);
+            left: rem-calc(50);
             font-size: rem-calc(21);
         }
     }

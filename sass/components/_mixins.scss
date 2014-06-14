@@ -25,7 +25,7 @@
 @mixin vertical-center-content($child) {
     font-size: 0;
 
-    &:before {
+    &::before {
         content: "";
         height: 100%;
         display: inline-block;
@@ -62,6 +62,11 @@
 
 @mixin font-smoothing($value: antialiased) {
     -webkit-font-smoothing: $value;
+}
+
+@mixin user-select($value: none) {
+    -moz-user-select: $value;
+    -webkit-user-select: $value;
 }
 
 

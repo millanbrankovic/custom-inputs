@@ -41,11 +41,9 @@ input[type="radio"] {
     + label {
         @extend %v-align;
         cursor: pointer;
-        display: inline-block;
         position: relative;
         user-select: none;
-        -moz-user-select: none;
-        -webkit-user-select: none;
+        @include user-select;
         @include transition(all .5s ease);
 
         * {
@@ -55,6 +53,34 @@ input[type="radio"] {
         .check {
             z-index: 2;
             @extend %v-align;
+            border: $base-border;
+            margin: rem-calc(0 5 0 0);
+            background: $dark-bg;
+            box-shadow: 0 1px 0 rgba(#fff, .15), 0 0 3px rgba(#000, .4) inset;
+
+            .ico {
+                top: 3px;
+                left: 2px;
+                opacity: 0;
+                position: absolute;
+                color: $blue-color;
+                font-size: rem-calc(18);
+            }
+        }
+    }
+
+    &:checked {
+
+        + label {
+
+            .check {
+                background: #38393b;
+                box-shadow: 0 1px 0 rgba(#fff, .15), 0 0 3px rgba(#000, .7) inset;
+
+                .ico {
+                    opacity: 1;
+                }
+            }
         }
     }
 }
@@ -62,7 +88,7 @@ input[type="radio"] {
 
 .default-checkboxes {
 
-    // Checkboxes
+    // Checkbox
     input[type="checkbox"] {
 
         + label {
@@ -70,35 +96,7 @@ input[type="radio"] {
             .check {
                 width: 18px;
                 height: 18px;
-                margin: 0 5px 0 0;
-                border: 1px solid #252728;
-                background: #3c3e40;
-                box-shadow: 0 1px 0 rgba(#fff, .15), 0 0 3px rgba(#000, .4) inset;
                 @include border-radius(3px);
-
-                .ico {
-                    top: 3px;
-                    left: 2px;
-                    opacity: 0;
-                    position: absolute;
-                    color: $blue-color;
-                    font-size: rem-calc(18);
-                }
-            }
-        }
-
-        &:checked {
-
-            + label {
-
-                .check {
-                    background: #38393b;
-                    box-shadow: 0 1px 0 rgba(#fff, .15), 0 0 3px rgba(#000, .7) inset;
-
-                    .ico {
-                        opacity: 1;
-                    }
-                }
             }
         }
     }
@@ -112,14 +110,10 @@ input[type="radio"] {
             .check {
                 width: 18px;
                 height: 18px;
-                margin: 0 5px 0 0;
                 position: relative;
-                border: 1px solid #252728;
-                background: #3c3e40;
-                box-shadow: 0 1px 0 rgba(#fff, .15), 0 0 3px rgba(#000, .4) inset;
                 @include border-radius(100px);
 
-                &:before {
+                &::before {
                     content: "";
                     opacity: 0;
                     top: 3px;
@@ -139,9 +133,8 @@ input[type="radio"] {
             + label {
 
                 .check {
-                    box-shadow: 0 1px 0 rgba(#fff, .15), 0 0 3px rgba(#000, .7) inset;
 
-                    &:before {
+                    &::before {
                         opacity: 1;
                     }
                 }
@@ -168,6 +161,7 @@ input[type="radio"] {
                 height: 26px;
                 top: 2px;
                 left: 2px;
+                border: none;
                 position: absolute;
                 background: $light-color;
                 @include border-radius(4px);
@@ -192,9 +186,9 @@ input[type="radio"] {
 
             + label {
 
-                &:before,
-                &:after {
-                    top: 10px;
+                &::before,
+                &::after {
+                    top: 9px;
                     position: absolute;
                     font-weight: 700;
                     font-size: rem-calc(10);
@@ -202,12 +196,12 @@ input[type="radio"] {
                     @include font-smoothing;
                 }
 
-                &:before {
+                &::before {
                     content: "On";
                     left: 6px;
                 }
 
-                &:after {
+                &::after {
                     content: "Off";
                     right: 6px;
                     color: $dark-color;
@@ -219,7 +213,7 @@ input[type="radio"] {
                 + label {
                     background: $gray-color;
 
-                    &:before {
+                    &::before {
                         color: $light-color;
                     }
 
