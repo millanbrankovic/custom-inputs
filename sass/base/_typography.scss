@@ -4,6 +4,28 @@
 |------------------------------------------------------------
 */
 
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../../assets/fonts/opensans-regular-webfont.eot');
+    src: url('../../assets/fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../assets/fonts/opensans-regular-webfont.woff') format('woff'),
+         url('../../assets/fonts/opensans-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'chalkdusterregular';
+    src: url('../fonts/chalkduster-webfont.eot');
+    src: url('../fonts/chalkduster-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chalkduster-webfont.woff') format('woff'),
+         url('../fonts/chalkduster-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 @font-face {
     font-family: 'CustomFont';
     src:url('../fonts/CustomFont.eot?-h95p23');
@@ -18,7 +40,7 @@
 .ico {
     font-family: 'CustomFont';
     speak: none;
-    font-size: 22px;
+    font-size: rem-calc(22);
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -35,3 +57,49 @@
 .ico-checkmark:before {
     content: "\e600";
 }
+
+
+// Headings
+
+h1, h2 {
+    color: $light-gray-color;
+}
+
+h1 {
+    font-size: rem-calc(24);
+
+    @include responsive($screen-medium) {
+        font-size: rem-calc(44);
+    }
+
+    @include responsive($screen-large) {
+        font-size: rem-calc(54);
+    }
+}
+
+h2 {
+    font-size: rem-calc(20);
+
+    @include responsive($screen-medium) {
+        font-size: rem-calc(32);
+    }
+
+    @include responsive($screen-large) {
+        font-size: rem-calc(42);
+    }
+}
+
+
+// Paragraphs
+
+p {
+    font: $base-font-size $base-font;
+    color: $dark-color;
+    line-height: 1.8;
+
+    @include responsive($screen-medium) {
+        font-size: rem-calc(18);
+    }
+}
+
+

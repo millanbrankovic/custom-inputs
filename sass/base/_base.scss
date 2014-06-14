@@ -4,51 +4,25 @@
 |------------------------------------------------------------
 */
 
+
 *, *:before, *:after {
     @include box-sizing(border-box);
     -webkit-tap-highlight-color: black(0);
 }
 
 body, html {
-    min-height: 100%;
-    color: $main-color;
+    color: $light-color;
     font-size: rem-calc(16);
-    font-family: $base-font;
-    background: $dark-color;
+    font: $base-font-size $base-font;
 }
 
 
-%inner-content {
-    margin: rem-calc(15 0);
-    padding: rem-calc(0 15);
-    @extend %clearfix;
+a {
+    font-weight: 700;
+    color: $blue-color;
+    text-decoration: none;
 
-    @include responsive($screen-medium) {
-        width: 80%;
-        margin: rem-calc(20) auto;
-    }
-
-    @include responsive($screen-large) {
-        width: 1024px;
+    &:hover {
+        text-decoration: underline;
     }
 }
-
-
-.header {
-    padding: rem-calc(15 0);
-    background: $light-color;
-}
-
-
-.main {
-    .text {
-        @extend %v-align;
-    }
-}
-
-.header-inner,
-.main-inner {
-    @extend %inner-content;
-}
-
-

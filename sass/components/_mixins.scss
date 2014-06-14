@@ -55,4 +55,13 @@
 }
 
 
+/*
+-- Font Smoothing Mixin
+------------------------------------------------------------
+*/
+
+@mixin font-smoothing($value: antialiased) {
+    -webkit-font-smoothing: $value;
+}
+
 

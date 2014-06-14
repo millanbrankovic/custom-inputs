@@ -5,13 +5,12 @@
 */
 
 
-
 // Typography
 // --------------------------------------------------
 
-$base-font: Arial, Helvetica, sans-serif;
+$base-font: open_sansregular, Arial, Helvetica, sans-serif;
+$header-heading-font: "chalkdusterregular";
 $base-font-size: 16px;
-
 
 
 // Colors
@@ -20,9 +19,12 @@ $base-font-size: 16px;
 $main-color: #1f2433;
 $light-color: #fff;
 $dark-color: #425a6d;
+$gray-color: #c4c4c4;
+$light-gray-color: #d0d6d7;
 $green-color: #52b700;
-$blue-color: #048ee0;
-
+$blue-color: #01bffe;
+$yellow-color: #e7c810;
+$pink-color: #f64989;
 
 
 // Media Queries

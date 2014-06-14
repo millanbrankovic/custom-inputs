@@ -9,20 +9,119 @@
 </head>
 <body>
     <header class="header">
-        <div class="header-inner">
-
-        </div>
+        <section class="header-inner">
+            <h1>Custom <span>Checkboxes</span></h1>
+            <h2>Pure CSS - Retina Optimized!</h2>
+        </section>
     </header>
     <main class="main">
-        <div class="main-inner">
-            <input type="checkbox" name="checkbox" value="value" id="remember">
-            <label for="remember">
-                <span class="check">
-                    <span class="ico ico-checkmark"></span>
-                </span>
-                <span class="text">Remember me</span>
-            </label>
-        </div>
+        <section class="main-inner">
+            <div class="checkboxes">
+                <ul class="default-checkboxes">
+                    <li>
+                        <input type="checkbox" name="checkbox" value="value" id="checkme">
+                        <label for="checkme">
+                            <span class="check">
+                                <span class="ico ico-checkmark"></span>
+                            </span>
+                            <span class="text">Check Me</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="radio" name="checkbox" value="value" id="clickme">
+                        <label for="clickme">
+                            <span class="check"></span>
+                            <span class="text">Click Me</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="radio" name="checkbox" value="value" id="clickme2">
+                        <label for="clickme2">
+                            <span class="check"></span>
+                            <span class="text">Or Me</span>
+                        </label>
+                    </li>
+                </ul>
+                <ul class="sliding-checkboxes">
+                    <li>
+                        <input type="checkbox" name="slidingcheckbox" value="value" id="slidingcheckbox">
+                        <label for="slidingcheckbox">
+                            <span class="check"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="slidingcheckbox" value="value" id="slidingcheckbox2" checked="checked">
+                        <label for="slidingcheckbox2">
+                            <span class="check"></span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="content">
+            <div class="content-inner">
+                <h2>
+                    Custom Checkbox &amp; Radio Inputs
+                </h2>
+                <p>
+                    Default checkboxes and radio buttons are a quite ugly and aren't friendly customizable - at least that was the case in the past. Luckily CSS3 offers a good solution - <a href="http://www.w3.org/TR/selectors/#checked" target="_blank">:checked</a> pseudo selector.
+                </p>
+                <p>
+                    It’s pretty safe to use on any project and easier with <a href="http://sass-lang.com" target="_blank">Sass</a> &amp; <a href="http://compass-style.org" target="_blank">Compass</a> ;)
+                </p>
+                <br>
+                <br>
+                <p>
+                    Available on <a href="https://github.com/millanbrankovic/Custom-CSS-Checkboxes" target="_blank">Github</a>
+                </p>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="footer-inner">
+            <ul>
+                <li>
+                    <a href="http://milanbrankovic.com" target="_blank">
+                        Milan Brankovic
+                    </a>
+                    UI/UX Designer &amp; Front-end Developer
+                </li>
+                <li>
+                    <a href="http://dribbble.com/millanbrankovic" target="_blank" title="Follow me on Dribbble">
+                        Dribble
+                    </a>
+                    <a href="https://twitter.com/millanbrankovic" target="_blank" title="Follow me on Twitter">
+                        Twitter
+                    </a>
+                </li>
+                <li>
+                    Made with <span>&#10084;</span>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
