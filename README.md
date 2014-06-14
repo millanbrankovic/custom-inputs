@@ -147,7 +147,7 @@ input[type="radio"] {
 }
 ```
 
-This works perfectly in the latest versions of all browsers (Firefox, Chrome, Safari, Android and IE8, IE9, IE10, IE11).
+##### This works perfectly in the latest versions of all browsers (Firefox, Chrome, Safari, Android and IE8, IE9, IE10, IE11).
 
 ##### Demo
 
