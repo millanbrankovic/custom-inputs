@@ -1,11 +1,12 @@
-## Custom CSS Checkboxes and Radio Buttons
+# Custom CSS Checkboxes and Radio Buttons
 
 Default checkboxes and radio buttons are a quite ugly and aren't friendly customizable - at least that was the case in the past. Luckily CSS3 offers a good solution - <a href="http://www.w3.org/TR/selectors/#checked" target="_blank">:checked</a> pseudo class.
 
-### The technique under the hood
+## The technique under the hood
 
-#####HTML
-For this examples I was using the the following markup:
+####HTML
+
+For this examples I was using the following markup:
 
 ```
 <input type="checkbox" name="checkbox" value="value" id="checkme">
@@ -17,8 +18,9 @@ For this examples I was using the the following markup:
 </label>
 ```
 
-#####CSS
-The first step is to hide all the original inputs by display: none; or visibility: hidden; In this case I was using a display property.
+####CSS
+
+###### Step 1 - Hde hide all the original inputs
 
 ```
 input[type="checkbox"],
