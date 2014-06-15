@@ -42,7 +42,6 @@ Target `label` with an adjacent selector `+`.
     @extend %v-align;
     cursor: pointer;
     position: relative;
-    user-select: none;
     @include user-select;
     @include transition(all .5s ease);
 }
@@ -103,7 +102,6 @@ input[type="radio"] {
         @extend %v-align;
         cursor: pointer;
         position: relative;
-        user-select: none;
         @include user-select;
         @include transition(all .5s ease);
 
