@@ -7,6 +7,11 @@
 
 *, *:before, *:after {
     @include box-sizing(border-box);
+    @include font-smoothing;
+}
+
+* {
+    @include selection(#fff, #f64989);
 }
 
 body, html {
@@ -26,4 +31,8 @@ a {
     &:hover {
         text-decoration: underline;
     }
+}
+
+strong {
+    font-family: $base-strong-font;
 }

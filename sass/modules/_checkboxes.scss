@@ -23,10 +23,15 @@
 
     li {
         display: inline-block;
-        margin: rem-calc(0 10);
+        margin: rem-calc(10 15);
 
         @include responsive($screen-medium) {
             width: 20%;
+            margin: rem-calc(0 10);
+        }
+
+        @include responsive($screen-large) {
+            margin: 0;
         }
     }
 }
@@ -42,7 +47,6 @@ input[type="radio"] {
         @extend %v-align;
         cursor: pointer;
         position: relative;
-        user-select: none;
         @include user-select;
         @include transition(all .5s ease);
 
@@ -80,6 +84,19 @@ input[type="radio"] {
                 .ico {
                     opacity: 1;
                 }
+            }
+        }
+    }
+
+    &:disabled {
+
+        + label {
+            opacity: .6;
+            cursor: default;
+
+            .check {
+                opacity: .8;
+                background: #3a5063;
             }
         }
     }
@@ -159,6 +176,7 @@ input[type="radio"] {
             .check {
                 width: 26px;
                 height: 26px;
+                margin: 0;
                 top: 2px;
                 left: 2px;
                 border: none;
@@ -181,7 +199,7 @@ input[type="radio"] {
         }
     }
 
-    li:last-child {
+    li:first-child {
         input[type="checkbox"] {
 
             + label {
@@ -193,7 +211,6 @@ input[type="radio"] {
                     font-weight: 700;
                     font-size: rem-calc(10);
                     text-transform: uppercase;
-                    @include font-smoothing;
                 }
 
                 &::before {
@@ -220,6 +237,53 @@ input[type="radio"] {
                     .check {
                         left: 32px;
                         background: $blue-color;
+                    }
+                }
+            }
+        }
+    }
+
+    li:last-child {
+        input[type="checkbox"] {
+
+            + label {
+                width: 70px;
+                height: 20px;
+                background: #3a5063;
+                @include border-radius(10px);
+                box-shadow: 0 1px 0 rgba(#fff, .15), 0 1px 3px rgba(0, 0, 0, .4) inset;
+
+                &::after {
+                    content: "";
+                    width: 70%;
+                    height: 1px;
+                    top: 50%;
+                    left: 50%;
+                    margin: 0 0 0 -35%;
+                    position: absolute;
+                    background: #283948;
+                    box-shadow: 0 1px 0 rgba(#fff, .3);
+                    @include transform(translateY(-50%));
+                }
+
+                .check {
+                    width: 16px;
+                    height: 16px;
+                    top: 2px;
+                    left: 2px;
+                    position: absolute;
+                    background: $light-color;
+                    @include border-radius(10px);
+                }
+            }
+
+            &:checked {
+
+                + label {
+
+                    .check {
+                        left: 52px;
+                        background: $green-color;
                     }
                 }
             }

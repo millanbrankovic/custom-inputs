@@ -61,8 +61,21 @@
 */
 
 @mixin font-smoothing($value: antialiased) {
-    -webkit-font-smoothing: $value;
+    @if $value == antialiased {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
 }
+
+
+/*
+-- User Select Mixin
+------------------------------------------------------------
+*/
 
 @mixin user-select($value: none) {
     -moz-user-select: $value;

@@ -196,6 +196,10 @@ sub {
 ------------------------------------------------------------
 */
 /*
+-- User Select Mixin
+------------------------------------------------------------
+*/
+/*
 |------------------------------------------------------------
 | Variables
 |------------------------------------------------------------
@@ -219,6 +223,29 @@ sub {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*::-moz-selection {
+  color: white;
+  background: #f64989;
+}
+*::-webkit-selection {
+  color: white;
+  background: #f64989;
+}
+*::-o-selection {
+  color: white;
+  background: #f64989;
+}
+*::-ms-selection {
+  color: white;
+  background: #f64989;
+}
+*::selection {
+  color: white;
+  background: #f64989;
 }
 
 body, html {
@@ -238,6 +265,10 @@ a:hover {
   text-decoration: underline;
 }
 
+strong {
+  font-family: open_sansbold, Arial, Helvetica, sans-serif;
+}
+
 /*
 |------------------------------------------------------------
 | Typography
@@ -247,6 +278,14 @@ a:hover {
   font-family: 'open_sansregular';
   src: url("../../assets/fonts/opensans-regular-webfont.eot");
   src: url("../../assets/fonts/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/opensans-regular-webfont.woff") format("woff"), url("../../assets/fonts/opensans-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sansbold';
+  src: url("../../assets/fonts/opensans-bold-webfont.eot");
+  src: url("../../assets/fonts/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/opensans-bold-webfont.woff") format("woff"), url("../../assets/fonts/opensans-bold-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -280,10 +319,15 @@ a:hover {
   vertical-align: middle;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .ico-checkmark::before {
   content: "\e600";
+}
+
+h1, h2, h3, h4, h5, h6, p, strong, small {
+  cursor: default;
 }
 
 h1, h2 {
@@ -533,12 +577,19 @@ input[type="radio"] + label .check {
 .default-checkboxes li,
 .sliding-checkboxes li {
   display: inline-block;
-  margin: 0 0.625rem;
+  margin: 0.625rem 0.9375rem;
 }
 @media (min-width: 641px) {
   .default-checkboxes li,
   .sliding-checkboxes li {
     width: 20%;
+    margin: 0 0.625rem;
+  }
+}
+@media (min-width: 1025px) {
+  .default-checkboxes li,
+  .sliding-checkboxes li {
+    margin: 0;
   }
 }
 
@@ -550,7 +601,6 @@ input[type="checkbox"] + label,
 input[type="radio"] + label {
   cursor: pointer;
   position: relative;
-  user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -webkit-transition: all 0.5s ease;
@@ -590,6 +640,16 @@ input[type="radio"]:checked + label .check {
 input[type="checkbox"]:checked + label .check .ico,
 input[type="radio"]:checked + label .check .ico {
   opacity: 1;
+}
+input[type="checkbox"]:disabled + label,
+input[type="radio"]:disabled + label {
+  opacity: .6;
+  cursor: default;
+}
+input[type="checkbox"]:disabled + label .check,
+input[type="radio"]:disabled + label .check {
+  opacity: .8;
+  background: #3a5063;
 }
 
 .default-checkboxes input[type="checkbox"] + label .check {
@@ -648,6 +708,7 @@ input[type="radio"]:checked + label .check .ico {
 .sliding-checkboxes input[type="checkbox"] + label .check {
   width: 26px;
   height: 26px;
+  margin: 0;
   top: 2px;
   left: 2px;
   border: none;
@@ -666,30 +727,73 @@ input[type="radio"]:checked + label .check .ico {
 .sliding-checkboxes input[type="checkbox"]:checked + label .check {
   left: 32px;
 }
-.sliding-checkboxes li:last-child input[type="checkbox"] + label::before, .sliding-checkboxes li:last-child input[type="checkbox"] + label::after {
+.sliding-checkboxes li:first-child input[type="checkbox"] + label::before, .sliding-checkboxes li:first-child input[type="checkbox"] + label::after {
   top: 9px;
   position: absolute;
   font-weight: 700;
   font-size: 0.625rem;
   text-transform: uppercase;
-  -webkit-font-smoothing: antialiased;
 }
-.sliding-checkboxes li:last-child input[type="checkbox"] + label::before {
+.sliding-checkboxes li:first-child input[type="checkbox"] + label::before {
   content: "On";
   left: 6px;
 }
-.sliding-checkboxes li:last-child input[type="checkbox"] + label::after {
+.sliding-checkboxes li:first-child input[type="checkbox"] + label::after {
   content: "Off";
   right: 6px;
   color: #425a6d;
 }
-.sliding-checkboxes li:last-child input[type="checkbox"]:checked + label {
+.sliding-checkboxes li:first-child input[type="checkbox"]:checked + label {
   background: #c4c4c4;
 }
-.sliding-checkboxes li:last-child input[type="checkbox"]:checked + label::before {
+.sliding-checkboxes li:first-child input[type="checkbox"]:checked + label::before {
   color: white;
 }
-.sliding-checkboxes li:last-child input[type="checkbox"]:checked + label .check {
+.sliding-checkboxes li:first-child input[type="checkbox"]:checked + label .check {
   left: 32px;
   background: #01bffe;
+}
+.sliding-checkboxes li:last-child input[type="checkbox"] + label {
+  width: 70px;
+  height: 20px;
+  background: #3a5063;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 3px rgba(0, 0, 0, 0.4) inset;
+}
+.sliding-checkboxes li:last-child input[type="checkbox"] + label::after {
+  content: "";
+  width: 70%;
+  height: 1px;
+  top: 50%;
+  left: 50%;
+  margin: 0 0 0 -35%;
+  position: absolute;
+  background: #283948;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.sliding-checkboxes li:last-child input[type="checkbox"] + label .check {
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  left: 2px;
+  position: absolute;
+  background: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+.sliding-checkboxes li:last-child input[type="checkbox"]:checked + label .check {
+  left: 52px;
+  background: #52b700;
 }
