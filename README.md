@@ -147,6 +147,8 @@ input[type="radio"] {
 
 ##### This works perfectly in the latest versions of all browsers (Firefox, Chrome, Safari, Android and IE9, IE10, IE11).
 
+If you want to use the same styles as on demo just use _checkboxes.scss file (sass/modules/_checkboxes.scss).
+
 ##### Demo
 
 Demo available <a href="http://milanbrankovic.com/custom-css-checkboxes/" target="_blank">here</a>
