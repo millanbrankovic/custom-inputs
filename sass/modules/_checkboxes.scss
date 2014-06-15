@@ -199,7 +199,7 @@ input[type="radio"] {
         }
     }
 
-    li:first-child {
+    li:nth-child(1) {
         input[type="checkbox"] {
 
             + label {
@@ -243,7 +243,65 @@ input[type="radio"] {
         }
     }
 
-    li:last-child {
+    li:nth-child(3) {
+        input[type="checkbox"] {
+
+            + label {
+                width: 70px;
+                height: 30px;
+                background: #3b3d45;
+                border: 1px solid rgba(#fff, .4);
+                @include border-radius(4px);
+                box-shadow: 0 1px 3px rgba(#000, .6) inset;
+
+                .check {
+                    width: 36px;
+                    height: 24px;
+                    top: 2px;
+                    left: 2px;
+                    background: #4d6275;
+                    @include border-radius(3px);
+                    box-shadow: 0 1px 1px rgba(#000, .2), 0 1px 1px rgba(#fff, .2) inset;
+
+                    &::after {
+                        content: "";
+                        width: 12px;
+                        height: 12px;
+                        top: 49%;
+                        left: 50%;
+                        margin: 0 0 0 -7px;
+                        position: absolute;
+                        border: 2px solid #a1bad1;
+                        box-shadow: 0 1px 1px rgba(#000, .5);
+                        @include border-radius(100px);
+                        @include transform(translateY(-50%));
+                    }
+                }
+            }
+
+            &:checked {
+
+                + label {
+
+                    .check {
+                        left: 30px;
+                        background: #70c000;
+
+                        &::after {
+                            content: "";
+                            width: 2px;
+                            height: 13px;
+                            margin: 0 0 0 -1px;
+                            border: 2px solid #c5ea84;
+                            box-shadow: 0 1px 1px rgba(#000, .6);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    li:nth-child(4) {
         input[type="checkbox"] {
 
             + label {
@@ -251,7 +309,7 @@ input[type="radio"] {
                 height: 20px;
                 background: #3a5063;
                 @include border-radius(10px);
-                box-shadow: 0 1px 0 rgba(#fff, .15), 0 1px 3px rgba(0, 0, 0, .4) inset;
+                box-shadow: 0 1px 0 rgba(#fff, .15), 0 1px 3px rgba(#000, .4) inset;
 
                 &::after {
                     content: "";

@@ -727,33 +727,91 @@ input[type="radio"]:disabled + label .check {
 .sliding-checkboxes input[type="checkbox"]:checked + label .check {
   left: 32px;
 }
-.sliding-checkboxes li:first-child input[type="checkbox"] + label::before, .sliding-checkboxes li:first-child input[type="checkbox"] + label::after {
+.sliding-checkboxes li:nth-child(1) input[type="checkbox"] + label::before, .sliding-checkboxes li:nth-child(1) input[type="checkbox"] + label::after {
   top: 9px;
   position: absolute;
   font-weight: 700;
   font-size: 0.625rem;
   text-transform: uppercase;
 }
-.sliding-checkboxes li:first-child input[type="checkbox"] + label::before {
+.sliding-checkboxes li:nth-child(1) input[type="checkbox"] + label::before {
   content: "On";
   left: 6px;
 }
-.sliding-checkboxes li:first-child input[type="checkbox"] + label::after {
+.sliding-checkboxes li:nth-child(1) input[type="checkbox"] + label::after {
   content: "Off";
   right: 6px;
   color: #425a6d;
 }
-.sliding-checkboxes li:first-child input[type="checkbox"]:checked + label {
+.sliding-checkboxes li:nth-child(1) input[type="checkbox"]:checked + label {
   background: #c4c4c4;
 }
-.sliding-checkboxes li:first-child input[type="checkbox"]:checked + label::before {
+.sliding-checkboxes li:nth-child(1) input[type="checkbox"]:checked + label::before {
   color: white;
 }
-.sliding-checkboxes li:first-child input[type="checkbox"]:checked + label .check {
+.sliding-checkboxes li:nth-child(1) input[type="checkbox"]:checked + label .check {
   left: 32px;
   background: #01bffe;
 }
-.sliding-checkboxes li:last-child input[type="checkbox"] + label {
+.sliding-checkboxes li:nth-child(3) input[type="checkbox"] + label {
+  width: 70px;
+  height: 30px;
+  background: #3b3d45;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) inset;
+}
+.sliding-checkboxes li:nth-child(3) input[type="checkbox"] + label .check {
+  width: 36px;
+  height: 24px;
+  top: 2px;
+  left: 2px;
+  background: #4d6275;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(255, 255, 255, 0.2) inset;
+}
+.sliding-checkboxes li:nth-child(3) input[type="checkbox"] + label .check::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  top: 49%;
+  left: 50%;
+  margin: 0 0 0 -7px;
+  position: absolute;
+  border: 2px solid #a1bad1;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  border-radius: 100px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.sliding-checkboxes li:nth-child(3) input[type="checkbox"]:checked + label .check {
+  left: 30px;
+  background: #70c000;
+}
+.sliding-checkboxes li:nth-child(3) input[type="checkbox"]:checked + label .check::after {
+  content: "";
+  width: 2px;
+  height: 13px;
+  margin: 0 0 0 -1px;
+  border: 2px solid #c5ea84;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+}
+.sliding-checkboxes li:nth-child(4) input[type="checkbox"] + label {
   width: 70px;
   height: 20px;
   background: #3a5063;
@@ -764,7 +822,7 @@ input[type="radio"]:disabled + label .check {
   border-radius: 10px;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 3px rgba(0, 0, 0, 0.4) inset;
 }
-.sliding-checkboxes li:last-child input[type="checkbox"] + label::after {
+.sliding-checkboxes li:nth-child(4) input[type="checkbox"] + label::after {
   content: "";
   width: 70%;
   height: 1px;
@@ -780,7 +838,7 @@ input[type="radio"]:disabled + label .check {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-.sliding-checkboxes li:last-child input[type="checkbox"] + label .check {
+.sliding-checkboxes li:nth-child(4) input[type="checkbox"] + label .check {
   width: 16px;
   height: 16px;
   top: 2px;
@@ -793,7 +851,7 @@ input[type="radio"]:disabled + label .check {
   -o-border-radius: 10px;
   border-radius: 10px;
 }
-.sliding-checkboxes li:last-child input[type="checkbox"]:checked + label .check {
+.sliding-checkboxes li:nth-child(4) input[type="checkbox"]:checked + label .check {
   left: 52px;
   background: #52b700;
 }
