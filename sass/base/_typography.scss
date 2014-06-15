@@ -78,7 +78,7 @@ h1, h2 {
 }
 
 h1 {
-    font-size: rem-calc(24);
+    font-size: rem-calc(28);
 
     @include responsive($screen-medium) {
         font-size: rem-calc(44);
@@ -90,14 +90,14 @@ h1 {
 }
 
 h2 {
-    font-size: rem-calc(20);
+    font-size: rem-calc(24);
 
     @include responsive($screen-medium) {
-        font-size: rem-calc(32);
+        font-size: rem-calc(34);
     }
 
     @include responsive($screen-large) {
-        font-size: rem-calc(42);
+        font-size: rem-calc(44);
     }
 }
 

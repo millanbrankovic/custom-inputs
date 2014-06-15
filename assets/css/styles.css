@@ -335,7 +335,7 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 @media (min-width: 641px) {
   h1 {
@@ -349,16 +349,16 @@ h1 {
 }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 @media (min-width: 641px) {
   h2 {
-    font-size: 2rem;
+    font-size: 2.125rem;
   }
 }
 @media (min-width: 1025px) {
   h2 {
-    font-size: 2.625rem;
+    font-size: 2.75rem;
   }
 }
 
@@ -477,7 +477,7 @@ input[type="radio"] + label .check {
 }
 .header h1 {
   margin: 3.75rem 0 0;
-  font-size: 1.375rem;
+  font-size: 1.625rem;
 }
 @media (min-width: 641px) {
   .header h1 {

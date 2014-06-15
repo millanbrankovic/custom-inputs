@@ -39,7 +39,7 @@
 
     h1 {
         margin: rem-calc(60 0 0);
-        font-size: rem-calc(22);
+        font-size: rem-calc(26);
 
         @include responsive($screen-medium) {
             font-size: rem-calc(46);
