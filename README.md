@@ -1,6 +1,6 @@
 # Custom CSS Checkboxes and Radio Buttons
 
-Default checkboxes and radio buttons are quite ugly and aren't friendly customizable - at least it was the case in the past. Luckily CSS3 offers a good solution - <a href="http://www.w3.org/TR/selectors/#checked" target="_blank">:checked</a> pseudo class.
+Default checkboxes and radio buttons are quite ugly and their appearance can't be easily customized - at least it was the case in the past. Luckily, CSS3 offers a good solution - <a href="http://www.w3.org/TR/selectors/#checked" target="_blank">:checked</a> pseudo class.
 
 ##### Demo
 
@@ -10,7 +10,7 @@ Demo available <a href="http://milanbrankovic.com/custom-css-checkboxes/" target
 
 ####HTML
 
-For this examples I was using the following markup:
+For this example I was using the following markup:
 
 ```
 <div class="custom-inputs">
@@ -152,9 +152,14 @@ input[type="radio"] {
 }
 ```
 
-##### This works perfectly in the latest versions of all browsers (Firefox, Chrome, Safari, Android and IE9, IE10, IE11).
+##### This works perfectly in following browsers:
+##### Firefox
+##### Chrome 
+##### Safari 
+##### Android
+##### IE9, IE10, IE11
 
-If you want to use the same styles as on demo just use _checkboxes.scss file (sass/modules/_checkboxes.scss).
+If you want to use the same styles as in the demo just use _checkboxes.scss file (sass/modules/_checkboxes.scss).
 
 ##### Demo
 
