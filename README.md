@@ -55,7 +55,7 @@ Target `label` with an adjacent selector `+`.
 ```
 
 ##### Step 3
-Next step is to target a `.check` class and to be creative as much as we can since this class will appear instead of the default checkboxes and radio buttons. If we are going to use icon fonts we need to target appropriate class, in this case I used `.ico` class nested inside of `.check` class as well.
+Next step is to target a `.check` class and to be creative as much as possible since this class will appear instead of the default checkboxes and radio buttons. If we are going to use icon fonts we need to target appropriate class, in this case I used `.ico` class nested inside of `.check` class as well.
 
 ```
 .check {
