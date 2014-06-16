@@ -13,24 +13,30 @@ Demo available <a href="http://milanbrankovic.com/custom-css-checkboxes/" target
 For this examples I was using the following markup:
 
 ```
-<input type="checkbox" name="checkbox" value="value" id="checkme">
-<label for="checkme">
-    <span class="check">
-        <span class="ico ico-checkmark"></span>
-    </span>
-    <span class="text">Check Me</span>
-</label>
+<div class="custom-inputs">
+    <input type="checkbox" name="checkbox" value="value" id="checkme">
+    <label for="checkme">
+        <span class="check">
+            <span class="ico ico-checkmark"></span>
+        </span>
+        <span class="text">Check Me</span>
+    </label>
+</div>
 ```
 
 ####CSS
 
 ##### Step 1
-Hide all the original inputs.
+Hide all the original inputs with `visibility` property - not with `display: none'`. Why that? In order to get inputs REALLY checked it's necessary to set them to be hidden since they will be considered as not existing within HTML if they has `display: none'` property and value.
 
 ```
 input[type="checkbox"],
 input[type="radio"] {
-    display: none;
+    top: 7px;
+    left: 2px;
+    margin: 0;
+    visibility: hidden;
+    position: absolute;
 }
 ```
 
