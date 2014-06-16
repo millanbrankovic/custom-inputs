@@ -22,11 +22,12 @@
 }
 
 
-.header {
+.main {
     text-align: center;
     background: $dark-color;
 
-    h1, p {
+    .headline,
+    .title {
         color: $yellow-color;
         font: $base-font-size $header-heading-font;
         @include transform(rotate(-8deg));
@@ -37,7 +38,7 @@
         }
     }
 
-    h1 {
+    .headline {
         margin: rem-calc(60 0 0);
         font-size: rem-calc(26);
 
@@ -59,7 +60,7 @@
         }
     }
 
-    p {
+    .title {
         position: relative;
         font-size: rem-calc(15);
 
@@ -73,12 +74,6 @@
             font-size: rem-calc(21);
         }
     }
-}
-
-
-.main {
-    text-align: center;
-    background: $dark-color;
 
     .text {
         font-size: rem-calc(13);
@@ -99,7 +94,7 @@
 
 
 .content {
-    margin: rem-calc(50 0 0);
+    margin: rem-calc(40 0 0);
     padding: rem-calc(25);
     background: $light-color;
 }

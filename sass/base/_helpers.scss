@@ -46,6 +46,11 @@
     list-style: none;
 }
 
+.screen-readers {
+    left: -10000px;
+    position: absolute;
+}
+
 %hide-text {
     font: 0/0 a;
     color: transparent;

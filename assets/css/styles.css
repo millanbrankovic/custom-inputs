@@ -330,7 +330,7 @@ h1, h2, h3, h4, h5, h6, p, strong, small {
   cursor: default;
 }
 
-h1, h2 {
+h1, h2, h3 {
   color: #d0d6d7;
 }
 
@@ -349,15 +349,29 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.625rem;
 }
 @media (min-width: 641px) {
   h2 {
-    font-size: 2.125rem;
+    font-size: 2.375rem;
   }
 }
 @media (min-width: 1025px) {
   h2 {
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+@media (min-width: 641px) {
+  h3 {
+    font-size: 2.125rem;
+  }
+}
+@media (min-width: 1025px) {
+  h3 {
     font-size: 2.75rem;
   }
 }
@@ -418,6 +432,11 @@ p {
   list-style: none;
 }
 
+.screen-readers {
+  left: -10000px;
+  position: absolute;
+}
+
 .main .text, input[type="checkbox"] + label,
 input[type="radio"] + label, input[type="checkbox"] + label .check,
 input[type="radio"] + label .check {
@@ -456,11 +475,12 @@ input[type="radio"] + label .check {
   }
 }
 
-.header {
+.main {
   text-align: center;
   background: #425a6d;
 }
-.header h1, .header p {
+.main .headline,
+.main .title {
   color: #e7c810;
   font: 16px "chalkdusterregular";
   -webkit-transform: rotate(-8deg);
@@ -471,53 +491,49 @@ input[type="radio"] + label .check {
   text-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
 }
 @media (min-width: 641px) {
-  .header h1, .header p {
+  .main .headline,
+  .main .title {
     text-shadow: 0 3px 1px rgba(0, 0, 0, 0.5);
   }
 }
-.header h1 {
+.main .headline {
   margin: 3.75rem 0 0;
   font-size: 1.625rem;
 }
 @media (min-width: 641px) {
-  .header h1 {
+  .main .headline {
     font-size: 2.875rem;
   }
 }
 @media (min-width: 1025px) {
-  .header h1 {
+  .main .headline {
     font-size: 3.5rem;
   }
 }
-.header h1 span {
+.main .headline span {
   top: 1.25rem;
   position: relative;
 }
 @media (min-width: 641px) {
-  .header h1 span {
+  .main .headline span {
     top: 2rem;
   }
 }
-.header p {
+.main .title {
   position: relative;
   font-size: 0.9375rem;
 }
 @media (min-width: 641px) {
-  .header p {
+  .main .title {
     font-size: 1.0625rem;
   }
 }
 @media (min-width: 1025px) {
-  .header p {
+  .main .title {
     top: -2.1875rem;
     left: 3.125rem;
     font-size: 1.3125rem;
   }
-}
-
-.main {
-  text-align: center;
-  background: #425a6d;
 }
 .main .text {
   font-size: 0.8125rem;
@@ -529,7 +545,7 @@ input[type="radio"] + label .check {
 }
 
 .content {
-  margin: 3.125rem 0 0;
+  margin: 2.5rem 0 0;
   padding: 1.5625rem;
   background: white;
 }
@@ -613,17 +629,17 @@ input[type="radio"] + label {
   position: relative;
   -moz-user-select: none;
   -webkit-user-select: none;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 input[type="checkbox"] + label *,
 input[type="radio"] + label * {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 input[type="checkbox"] + label .check,
 input[type="radio"] + label .check {

@@ -58,10 +58,10 @@ input[type="radio"] {
         cursor: pointer;
         position: relative;
         @include user-select;
-        @include transition(all .5s ease);
+        @include transition(all .4s ease);
 
         * {
-            @include transition(all .3s ease);
+            @include transition(all .2s ease);
         }
 
         .check {

@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6, p, strong, small, {
     cursor: default;
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: $light-gray-color;
 }
 
@@ -90,6 +90,18 @@ h1 {
 }
 
 h2 {
+    font-size: rem-calc(26);
+
+    @include responsive($screen-medium) {
+        font-size: rem-calc(38);
+    }
+
+    @include responsive($screen-large) {
+        font-size: rem-calc(48);
+    }
+}
+
+h3 {
     font-size: rem-calc(24);
 
     @include responsive($screen-medium) {
