@@ -432,8 +432,11 @@ p {
   list-style: none;
 }
 
-.screen-readers {
-  left: -10000px;
+.sr {
+  width: 1px;
+  height: 1px;
+  top: -1000em;
+  overflow: hidden;
   position: absolute;
 }
 
