@@ -1,6 +1,6 @@
 # Custom CSS Checkboxes and Radio Buttons
 
-Default checkboxes and radio buttons are a quite ugly and aren't friendly customizable - at least that was the case in the past. Luckily CSS3 offers a good solution - <a href="http://www.w3.org/TR/selectors/#checked" target="_blank">:checked</a> pseudo class.
+Default checkboxes and radio buttons are quite ugly and aren't friendly customizable - at least it was the case in the past. Luckily CSS3 offers a good solution - <a href="http://www.w3.org/TR/selectors/#checked" target="_blank">:checked</a> pseudo class.
 
 ##### Demo
 
