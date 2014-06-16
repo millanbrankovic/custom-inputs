@@ -27,7 +27,7 @@ For this example I was using the following markup:
 ####CSS
 
 ##### Step 1
-Hide all the original inputs with `visibility` property - not with `display: none`. Why? In order to get inputs REALLY checked it's necessary to set them to be hidden since they will be considered as not existing within HTML if they has a `display: none` property and value.
+Hide all the original inputs with `visibility` property - not with `display: none`. In order for inputs to catch `click`, `hover` and other events (i.e. become checked/unchecked) it is necessary to hide them using visibility property. If element is hidden through `display: none`, its clickable area is also removed from the page, which makes event triggering (clicking) impossible.
 
 ```
 input[type="checkbox"],
@@ -55,7 +55,7 @@ Target `label` with an adjacent selector `+`.
 ```
 
 ##### Step 3
-Next step is to target a `.check` class and to be creative as much as we can since this class will appear instead of the default checkboxes and radiobuttons. If we are going to use icon fonts we need to target appropriate class, in this case I was using an `.ico` class nested inside of `.check` class as well.
+Next step is to target a `.check` class and to be creative as much as we can since this class will appear instead of the default checkboxes and radio buttons. If we are going to use icon fonts we need to target appropriate class, in this case I used `.ico` class nested inside of `.check` class as well.
 
 ```
 .check {
@@ -152,12 +152,12 @@ input[type="radio"] {
 }
 ```
 
-##### This works perfectly in following browsers:
-Firefox
-Chrome 
-Safari 
-Android
-IE9, IE10, IE11
+##### This works perfectly in latest versions of following browsers:
+- Firefox
+- Chrome 
+- Safari 
+- Android
+- IE9, IE10, IE11
 
 If you want to use the same styles as in the demo just use _checkboxes.scss file (sass/modules/_checkboxes.scss).
 
