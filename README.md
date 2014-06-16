@@ -35,6 +35,7 @@ input[type="radio"] {
     top: 7px;
     left: 2px;
     margin: 0;
+    z-index: 3;
     visibility: hidden;
     position: absolute;
 }
