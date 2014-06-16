@@ -27,7 +27,7 @@ For this examples I was using the following markup:
 ####CSS
 
 ##### Step 1
-Hide all the original inputs with `visibility` property - not with `display: none'`. Why that? In order to get inputs REALLY checked it's necessary to set them to be hidden since they will be considered as not existing within HTML if they has `display: none'` property and value.
+Hide all the original inputs with `visibility` property - not with `display: none'`. Why that? In order to get inputs REALLY checked it's necessary to set them to be hidden since they will be considered as not existing within HTML if they has a `display: none'` property and value.
 
 ```
 input[type="checkbox"],
