@@ -153,11 +153,11 @@ input[type="radio"] {
 ```
 
 ##### This works perfectly in following browsers:
-##### Firefox
-##### Chrome 
-##### Safari 
-##### Android
-##### IE9, IE10, IE11
+Firefox
+Chrome 
+Safari 
+Android
+IE9, IE10, IE11
 
 If you want to use the same styles as in the demo just use _checkboxes.scss file (sass/modules/_checkboxes.scss).
 
