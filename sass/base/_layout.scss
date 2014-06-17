@@ -30,7 +30,7 @@
     .title {
         color: $yellow-color;
         font: $base-font-size $header-heading-font;
-        @include transform(rotate(-8deg));
+        @include transform(rotate(-10deg));
         text-shadow: 0 2px 1px rgba(#000, .4);
 
         @include responsive($screen-medium) {
