@@ -27,7 +27,7 @@ For this example I was using the following markup:
 ####CSS
 
 ##### Step 1
-Hide all the original inputs with `visibility` property - not with `display: none`. In order for inputs to catch `click`, `hover` and other events (i.e. become checked/unchecked) it is necessary to hide them using visibility property. If element is hidden through `display: none`, its clickable area is also removed from the page, which makes event triggering (clicking) impossible.
+Hide all the original inputs with `visibility` property - not with `display: none`. In order for inputs to catch `click` event (i.e. become checked/unchecked) it is necessary to hide them using visibility property. If element is hidden through `display: none`, its clickable area is also removed from the page, which makes event triggering (clicking) impossible.
 
 ```
 input[type="checkbox"],
