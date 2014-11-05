@@ -12,7 +12,7 @@ Demo available <a href="http://milanbrankovic.com/custom-css-checkboxes/" target
 
 For this example I was using the following markup:
 
-```
+```html
 <div class="custom-inputs">
     <input type="checkbox" name="checkbox" value="value" id="checkme">
     <label for="checkme">
@@ -29,7 +29,7 @@ For this example I was using the following markup:
 ##### Step 1
 Hide all the original inputs with `visibility` property - not with `display: none`. In order for inputs to catch `click` event (i.e. become checked/unchecked) it is necessary to hide them using visibility property. If element is hidden through `display: none`, its clickable area is also removed from the page, which makes event triggering (clicking) impossible.
 
-```html
+```scss
 input[type="checkbox"],
 input[type="radio"] {
     top: 7px;
