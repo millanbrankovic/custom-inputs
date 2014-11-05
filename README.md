@@ -29,7 +29,7 @@ For this example I was using the following markup:
 ##### Step 1
 Hide all the original inputs with `visibility` property - not with `display: none`. In order for inputs to catch `click` event (i.e. become checked/unchecked) it is necessary to hide them using visibility property. If element is hidden through `display: none`, its clickable area is also removed from the page, which makes event triggering (clicking) impossible.
 
-```
+```html
 input[type="checkbox"],
 input[type="radio"] {
     top: 7px;
@@ -44,7 +44,7 @@ input[type="radio"] {
 ##### Step 2
 Target `label` with an adjacent selector `+`.
 
-```
+```scss
 + label {
     @extend %v-align;
     cursor: pointer;
@@ -57,7 +57,7 @@ Target `label` with an adjacent selector `+`.
 ##### Step 3
 Next step is to target a `.check` class and to be creative as much as possible since this class will appear instead of the default checkboxes and radio buttons. If we are going to use icon fonts we need to target appropriate class, in this case I used `.ico` class nested inside of `.check` class as well.
 
-```
+```scss
 .check {
     z-index: 2;
     @extend %v-align;
@@ -80,7 +80,7 @@ Next step is to target a `.check` class and to be creative as much as possible s
 ##### Step 4
 The final step and the most important is `:checked` pseudo class.
 
-```
+```scss
 :checked {
 
     + label {
@@ -100,7 +100,7 @@ The final step and the most important is `:checked` pseudo class.
 
 ##### Complete chunk of SASS/COMPASS code 
 
-```
+```scss
 input[type="checkbox"],
 input[type="radio"] {
     top: 7px;
