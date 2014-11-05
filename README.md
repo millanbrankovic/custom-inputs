@@ -4,7 +4,7 @@ Default checkboxes and radio buttons are quite ugly and their appearance can't b
 
 ##### Demo
 
-Demo available [here](http://milanbrankovic.com/custom-css-checkboxes target="_blank")
+Demo available [here](http://milanbrankovic.com/custom-css-checkboxes)
 
 ## The technique under the hood
 
@@ -168,4 +168,4 @@ If you want to use the same styles as in the demo just use _checkboxes.scss file
 
 ##### Demo
 
-Demo available <a href="http://milanbrankovic.com/custom-css-checkboxes/" target="_blank">here</a>
+Demo available [here](http://milanbrankovic.com/custom-css-checkboxes)
