@@ -164,7 +164,7 @@ input[type="radio"] {
 - Android
 - IE9, IE10, IE11
 
-If you want to use the same styles as in the demo just use _checkboxes.scss file (sass/modules/_checkboxes.scss).
+If you want to use the same styles as in the demo just use _checkboxes.scss file (sass/components/_checkboxes.scss).
 
 ##### Demo
 
