@@ -1,0 +1,28 @@
+// Footer
+//------------------------------------------------------------
+//
+
+
+.footer {
+    margin: rem-calc(50 0);
+    text-align: center;
+
+    ul {
+        color: $dark-color;
+        font-size: rem-calc(12);
+        @extend %reset-list;
+
+        li {
+            margin: rem-calc(5 0);
+        }
+
+        a {
+            margin: rem-calc(0 2);
+        }
+
+        span {
+            color: $pink-color;
+            font-size: rem-calc(18);
+        }
+    }
+}

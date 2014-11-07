@@ -1,0 +1,33 @@
+// IcoFonts
+//------------------------------------------------------------
+//
+
+@font-face {
+    font-family: 'CustomFont';
+    src:url('../fonts/CustomFont.eot?-h95p23');
+    src:url('../fonts/CustomFont.eot?#iefix-h95p23') format('embedded-opentype'),
+        url('../fonts/CustomFont.woff?-h95p23') format('woff'),
+        url('../fonts/CustomFont.ttf?-h95p23') format('truetype'),
+        url('../fonts/CustomFont.svg?-h95p23#CustomFont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.ico {
+    font-family: 'CustomFont';
+    speak: none;
+    font-size: rem-calc(22);
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+    @include font-smoothing;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-checkmark::before {
+    content: "\e600";
+}

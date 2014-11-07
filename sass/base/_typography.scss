@@ -1,9 +1,10 @@
-/*
-|------------------------------------------------------------
-| Typography
-|------------------------------------------------------------
-*/
+// Typography
+//------------------------------------------------------------
+//
 
+
+// WebFonts
+// --------------------------------------------------
 
 @font-face {
     font-family: 'open_sansregular';
@@ -47,27 +48,9 @@
     font-style: normal;
 }
 
-.ico {
-    font-family: 'CustomFont';
-    speak: none;
-    font-size: rem-calc(22);
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    display: inline-block;
-    vertical-align: middle;
-    @include font-smoothing;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.ico-checkmark::before {
-    content: "\e600";
-}
-
 
 // Headings
+// --------------------------------------------------
 
 h1, h2, h3, h4, h5, h6, p, strong, small, {
     cursor: default;
@@ -80,11 +63,11 @@ h1, h2, h3 {
 h1 {
     font-size: rem-calc(28);
 
-    @include responsive($screen-medium) {
+    @include screen($medium) {
         font-size: rem-calc(44);
     }
 
-    @include responsive($screen-large) {
+    @include screen($large) {
         font-size: rem-calc(54);
     }
 }
@@ -92,11 +75,11 @@ h1 {
 h2 {
     font-size: rem-calc(26);
 
-    @include responsive($screen-medium) {
+    @include screen($medium) {
         font-size: rem-calc(38);
     }
 
-    @include responsive($screen-large) {
+    @include screen($large) {
         font-size: rem-calc(48);
     }
 }
@@ -104,26 +87,26 @@ h2 {
 h3 {
     font-size: rem-calc(24);
 
-    @include responsive($screen-medium) {
+    @include screen($medium) {
         font-size: rem-calc(34);
     }
 
-    @include responsive($screen-large) {
+    @include screen($large) {
         font-size: rem-calc(44);
     }
 }
 
 
-// Paragraphs
+// Paragraph
+// --------------------------------------------------
 
 p {
-    font: $base-font-size $base-font;
+    font: $base-font-size $base-font-regular;
     color: $dark-color;
     line-height: 1.8;
 
-    @include responsive($screen-medium) {
+    @include screen($medium) {
         font-size: rem-calc(18);
     }
 }
-
 

@@ -98,7 +98,7 @@ The final step and the most important is `:checked` pseudo class.
 ```
 
 
-##### Complete chunk of SASS/COMPASS code 
+##### Complete chunk of SASS/COMPASS code
 
 ```scss
 input[type="checkbox"],
@@ -159,8 +159,8 @@ input[type="radio"] {
 
 ##### This works perfectly in latest versions of following browsers:
 - Firefox
-- Chrome 
-- Safari 
+- Chrome
+- Safari
 - Android
 - IE9, IE10, IE11
 

@@ -1,27 +1,30 @@
-/*
-|------------------------------------------------------------
-| Base
-|------------------------------------------------------------
-*/
+// Base
+//------------------------------------------------------------
+//
 
 
 *, *:before, *:after {
-    @include box-sizing(border-box);
+    box-sizing: border-box !important;
     @include font-smoothing;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 
 * {
-    @include selection(#fff, #f64989);
+    @include selection-colors(#fff, #f64989);
 }
 
 body, html {
     color: $light-color;
     font-size: rem-calc(16);
-    font: $base-font-size $base-font;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-tap-highlight-color: transparent;
+    font: $base-font-size $base-font-regular;
 }
 
+img {
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
 
 a {
     font-weight: 700;
@@ -33,6 +36,7 @@ a {
     }
 }
 
-strong {
-    font-family: $base-strong-font;
+b, strong {
+    font-family: $base-font-strong;
 }
+

@@ -1,21 +1,17 @@
-/*
-|------------------------------------------------------------
-| Functions
-|------------------------------------------------------------
-*/
+// Functions
+//------------------------------------------------------------
+//
 
 
-// Rem-Calc Function
+// Rem-Calc Function (Convert px to rem)
 // --------------------------------------------------
 
-$rem-base: 16px !default;
-
-@function property($num) {
+@function strip-unit($num) {
     @return $num / ($num * 0 + 1);
 }
 
 @function convert-to-rem($value, $base-value: $rem-base)  {
-    $value: property($value) / property($base-value) * 1rem;
+    $value: strip-unit($value) / strip-unit($base-value) * 1rem;
     @if ($value == 0rem) { $value: 0; }
     @return $value;
 }
@@ -26,7 +22,7 @@ $rem-base: 16px !default;
     @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
 
     $remValues: ();
-        @for $i from 1 through $max {
+    @for $i from 1 through $max {
         $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
     }
     @return $remValues;

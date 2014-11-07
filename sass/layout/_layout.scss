@@ -1,0 +1,34 @@
+// Layout
+//------------------------------------------------------------
+//
+
+
+%inner-content {
+    position: relative;
+    padding: rem-calc(0 5);
+    @extend %clearfix;
+
+    @include screen($medium) {
+        width: 80%;
+        margin: 0 auto;
+        padding: rem-calc(0 15);
+    }
+
+    @include screen($large) {
+        width: rem-calc(1024);
+    }
+}
+
+
+.main-inner,
+.content-inner,
+.footer-inner {
+    @extend %inner-content;
+}
+
+
+.content {
+    margin: rem-calc(40 0 0);
+    padding: rem-calc(25);
+    background: $light-color;
+}
