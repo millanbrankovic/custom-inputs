@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    -webkit-tap-highlight-color: color(black a(0));
+}
+
+html,
+body {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--brand-gray);
+    font-family: var(--font-primary);
+    font-size: var(--body-font-size);
+    font-weight: var(--light-font);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+a {
+    color: var(--brand-gray);
+    text-decoration: none;
+    transition: var(--transition);
+
+    &:hover,
+    &:focus {
+        color: var(--brand-blue);
+        text-decoration: none;
+    }
+
+    &:active {
+        color: var(--brand-blue);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+ul,
+dl,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+small {
+    font-size: var(--body-font-small);
+}

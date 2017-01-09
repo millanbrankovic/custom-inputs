@@ -1,0 +1,26 @@
+.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    &--gutters {
+        margin-top: -var(--gutter-thiny);
+        margin-bottom: var(--gutter);
+        margin-left: -var(--gutter-thiny);
+    }
+
+}
+
+.grid-cell {
+    flex: 1;
+    position: relative;
+
+    &--gutters {
+        padding: var(--gutter-thiny) 0 0 var(--gutter-thiny);
+    }
+
+}
+
+.grid--flex-cells > .grid-cell {
+    display: flex;
+}

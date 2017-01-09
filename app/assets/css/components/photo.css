@@ -1,0 +1,18 @@
+/**
+* This file should be in conjunction with "item" app/assets/css/components/item.css
+*
+* ".photo" must be a child of ".item" in order to keep aspect ratio and prevent reflow
+*
+*/
+
+.photo {
+    width: 100%;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+
+    @supports (object-fit: cover) {
+        object-fit: cover;
+        height: 100%;
+    }
+}

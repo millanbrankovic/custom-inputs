@@ -1,0 +1,8 @@
+.header {
+    padding: var(--gutter);
+    background-color: var(--brand-blue);
+
+    @media (--desktop) {
+        background-color: var(--brand-yellow);
+    }
+}

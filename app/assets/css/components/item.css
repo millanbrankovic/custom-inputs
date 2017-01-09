@@ -1,0 +1,17 @@
+/**
+* This file should be in conjunction with "photo" app/assets/css/components/photo.css
+*
+* ".item" must be a parent of ".photo" in order to keep aspect ratio and prevent reflow
+*
+*/
+
+.item {
+    height: 0px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 100%; /* 1:1 Aspect Ratio */
+    /* padding-bottom: 56.25%; 16:9 Aspect Ratio */
+    /* padding-bottom: 75%; 4:3 Aspect Ratio */
+    background-color: var(--brand-lt-gray);
+}
