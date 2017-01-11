@@ -26,6 +26,10 @@ Hide all the original inputs with `visibility` property - not with `display: non
 In this case I just hid input elements with class `.custom-input-input`
 
 ```css
+.custom-input {
+    position: relative;
+}
+
 .custom-input-input {
     visibility: hidden;
     position: absolute;
