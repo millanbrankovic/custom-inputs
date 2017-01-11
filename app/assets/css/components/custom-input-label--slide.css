@@ -6,7 +6,6 @@
         background: var(--brand-md-lt-gray);
 
         &::before {
-            content: "";
             width: 20px;
             height: 20px;
             top: -3px;

@@ -1,7 +1,6 @@
 .custom-input-label {
     &--radio {
         &::before {
-            content: "";
             width: 18px;
             height: 18px;
             display: inline-block;
@@ -11,7 +10,6 @@
         }
 
         &::after {
-            content: "";
             width: 10px;
             height: 10px;
             top: 4px;
