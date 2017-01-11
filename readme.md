@@ -4,7 +4,7 @@ Default checkboxes and radio buttons are quite plain and their appearance can't 
 
 ##### Demo
 
-Demo available [here](http://milanbrankovic.com/demos/custom-inputs)
+Demo is available [here](http://milanbrankovic.com/demos/custom-inputs)
 
 ## The technique under the hood
 
