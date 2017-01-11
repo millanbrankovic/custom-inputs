@@ -161,14 +161,14 @@ The final step and the most important is `:checked` pseudo class.
 }
 ```
 
-##### This works perfectly in latest versions of following browsers:
+##### This works perfectly in latest versions of the following browsers:
 - Firefox
 - Chrome
 - Safari
 - Android
 - IE11, IEedge
 
-There are four separated css files used in this demo. All files are placed in the `app/assets/css/components/` and named as modifier classes `custom-input.css`, `custom-input-label--check.css`, `custom-input-label--slide.css`, `custom-input-label--radio.css`
+There are four separated css files used in this demo. All files are placed in the `app/assets/css/components/` and named as modifier classes `custom-input.css`, `custom-input-label--check.css`, `custom-input-label--slide.css`, `custom-input-label--radio.css` so it can be used accordingly depending on the needs.
 
 ##### Demo
 
