@@ -15,7 +15,7 @@ For this example I was using the following HTML markup:
 ```html
 <div class="custom-input">
     <input class="custom-input-input" type="checkbox" name="input-1" value="value" id="input-1">
-        <label class="custom-input-label custom-input-label--check" for="input-1"></label>
+    <label class="custom-input-label custom-input-label--check" for="input-1"></label>
 </div>
 ```
 
