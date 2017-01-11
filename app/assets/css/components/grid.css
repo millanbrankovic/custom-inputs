@@ -5,10 +5,79 @@
 
     &--gutters {
         margin-top: -var(--gutter-thiny);
-        margin-bottom: var(--gutter);
         margin-left: -var(--gutter-thiny);
     }
 
+}
+
+.grid-row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    &:nth-of-type(odd) {
+        .grid-cell {
+            &:nth-child(2n+1) {
+                background-color: transparent;
+            }
+
+            &:nth-child(2n+2) {
+                background-color: var(--brand-lt-gray);
+            }
+
+            @media (--phablet) {
+                &:nth-child(2n+3) {
+                    background-color: var(--brand-lt-gray);
+                }
+
+                &:nth-child(2n+4) {
+                    background-color: transparent;
+                }
+            }
+
+            @media (--tablet) {
+                &:nth-child(2n+3) {
+                    background-color: transparent;
+                }
+
+                &:nth-child(2n+4) {
+                    background-color: var(--brand-lt-gray);
+                }
+            }
+        }
+    }
+
+    &:nth-of-type(even) {
+        .grid-cell {
+            &:nth-child(2n+1) {
+                background-color: transparent;
+            }
+
+            &:nth-child(2n+2) {
+                background-color: var(--brand-lt-gray);
+            }
+
+            @media (--phablet) {
+                &:nth-child(2n+3) {
+                    background-color: var(--brand-lt-gray);
+                }
+
+                &:nth-child(2n+4) {
+                    background-color: transparent;
+                }
+            }
+
+            @media (--tablet) {
+                &:nth-child(2n+1) {
+                    background-color: var(--brand-lt-gray);
+                }
+
+                &:nth-child(2n+2) {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
 }
 
 .grid-cell {
@@ -19,6 +88,11 @@
         padding: var(--gutter-thiny) 0 0 var(--gutter-thiny);
     }
 
+    &--flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .grid--flex-cells > .grid-cell {

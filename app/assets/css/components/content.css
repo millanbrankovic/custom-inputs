@@ -1,0 +1,9 @@
+.content {
+    padding-top: var(--gutter-large);
+    padding-bottom: var(--gutter-large);
+
+    @media (--large) {
+        padding-top: var(--gutter-huge);
+        padding-bottom: var(--gutter-huge);
+    }
+}

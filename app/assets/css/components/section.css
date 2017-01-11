@@ -1,0 +1,33 @@
+.section {
+    display: flex;
+    flex: 1 0 auto;
+    text-align: center;
+
+    &--top {
+        flex-basis: 80%;
+
+        @media (--large) {
+            flex-basis: 70%;
+        }
+
+        @media (--desktop) {
+            flex-basis: 60%;
+        }
+    }
+
+    &--bg {
+        color: white;
+        flex-basis: 20%;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--brand-red);
+
+        @media (--large) {
+            flex-basis: 30%;
+        }
+
+        @media (--desktop) {
+            flex-basis: 40%;
+        }
+    }
+}

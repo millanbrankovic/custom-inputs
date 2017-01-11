@@ -1,0 +1,57 @@
+.custom-input-label {
+    &--check {
+        &::before {
+            content: "";
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            border: var(--border);
+            background-color: white;
+            border-radius: var(--radius);
+        }
+
+        &::after {
+            content: "";
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+    }
+}
+
+/**
+* The ".custom-input-input" class is part of custom-input.css file
+*/
+.custom-input-input {
+    &:checked {
+        + .custom-input-label {
+            &--check {
+                &::before {
+                    border-color: var(--brand-green);
+                    background-color: var(--brand-green);
+                }
+
+                &::after {
+                    width: 18px;
+                    height: 18px;
+                    background: svg-load("ico-checkmark.svg", fill: white) no-repeat center center;
+                }
+            }
+        }
+    }
+
+    &[disabled] {
+        + .custom-input-label {
+            &--check {
+                &::before {
+                    border-color: var(--brand-gray);
+                    background-color: var(--brand-gray);
+                }
+
+                &::after {
+                    background: svg-load("ico-checkmark.svg", fill: var(--brand-md-gray)) no-repeat center center;
+                }
+            }
+        }
+    }
+}

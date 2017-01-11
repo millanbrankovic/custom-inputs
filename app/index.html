@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Boilerplate</title>
+    <title>Custom checkboxes and radio buttons</title>
     <meta charset=utf-8>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="A pure CSS approach to customize checkboxes and radio buttons on your HTML forms">
     <link rel="shortcut icon" type="image/x-icon" href="">
     <!-- Preload the most important fonts to avoid FOIT - https://www.zachleat.com/web/preload/ -->
-    <link rel="preload" href="assets/fonts/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/RobotoCondensed-Light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <!-- build:css assets/css/styles.css -->
     <link rel="stylesheet" href="/build/css/styles.css">
     <!-- endbuild -->
@@ -17,18 +17,131 @@
     <link rel="stylesheet" href="/build/css/styles-data.css">
     <!-- endbuild -->
 </head>
-    <body>
-        <div class="wrapper">
-            <header class="header">
-                <span class="icon icon--favorite"></span>
-                <small>Company name</small>
-            </header>
-            <main class="main">
-                <h1 class="h1 u-light-font">Content</h1>
-            </main>
-            <footer class="footer">
-                <small>Copyright 2017</small>
-            </footer>
-        </div>
+    <body class="page">
+        <h1 class="u-screen-readers">Completely CSS Custom Checkboxes and Radio Bttons</h1>
+        <main class="main">
+            <div class="section section--top">
+                <div class="grid">
+                    <div class="grid-row">
+                        <div class="grid-cell grid-cell--flex u-full u-small-1of2 u-tablet-1of4">
+                            <div class="custom-input">
+                                <input class="custom-input-input" type="checkbox" name="input-1" value="value" id="input-1">
+                                <label class="custom-input-label custom-input-label--check" for="input-1">
+                                    <span class="custom-input-span">
+                                        Checkbox
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="grid-cell grid-cell--flex u-full u-small-1of2 u-tablet-1of4">
+                            <div class="custom-input">
+                                <input class="custom-input-input" type="checkbox" name="input-2" value="value" id="input-2" checked>
+                                <label class="custom-input-label custom-input-label--check" for="input-2">
+                                    <span class="custom-input-span">
+                                        Checkbox Checked
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="grid-cell grid-cell--flex u-full u-small-1of2 u-tablet-1of4">
+                            <div class="custom-input">
+                                <input class="custom-input-input" type="checkbox" name="input-3" value="value" id="input-3" disabled>
+                                <label class="custom-input-label custom-input-label--check" for="input-3">
+                                    <span class="custom-input-span">
+                                        Checkbox Disabled
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="grid-cell grid-cell--flex u-full u-small-1of2 u-tablet-1of4">
+                            <div class="custom-input">
+                                <input class="custom-input-input" type="checkbox" name="input-4" value="value" id="input-4" disabled checked>
+                                <label class="custom-input-label custom-input-label--check" for="input-4">
+                                    <span class="custom-input-span">
+                                        Checkbox Disabled Checked
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-row">
+                        <div class="grid-cell grid-cell--flex u-full u-small-1of2 u-tablet-1of4">
+                            <div class="custom-input">
+                                <input class="custom-input-input" type="checkbox" name="input-5" value="value" id="input-5">
+                                <label class="custom-input-label custom-input-label--slide" for="input-5"></label>
+                            </div>
+                        </div>
+                        <div class="grid-cell grid-cell--flex u-full u-small-1of2 u-tablet-1of4">
+                            <div class="custom-input">
+                                <input class="custom-input-input" type="checkbox" name="input-6" value="value" id="input-6" checked>
+                                <label class="custom-input-label custom-input-label--slide" for="input-6"></label>
+                            </div>
+                        </div>
+                        <div class="grid-cell grid-cell--flex u-full u-small-1of2 u-tablet-1of4">
+                            <div class="custom-input">
+                                <input class="custom-input-input" type="radio" name="radio" value="value" id="radio-1" checked>
+                                <label class="custom-input-label custom-input-label--radio" for="radio-1"></label>
+                            </div>
+                        </div>
+                        <div class="grid-cell grid-cell--flex u-full u-small-1of2 u-tablet-1of4">
+                            <div class="custom-input">
+                                <input class="custom-input-input" type="radio" name="radio" value="value" id="radio-2">
+                                <label class="custom-input-label custom-input-label--radio" for="radio-2"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="section section--bg">
+                <h2 class="h1 h1--scalable u-uppercase">Pure CSS Custom Inputs</h1>
+            </section>
+
+            <div class="section">
+                <div class="wrapper">
+                    <div class="content">
+                        <p>
+                            Default checkboxes and radio buttons are quite plain and their appearance can't be easily customized - at least it was the case in the past. <br>
+                            Luckily, CSS3 offers a good solution - <a href="http://www.w3.org/TR/selectors/#checked" target="_blank">:checked</a> pseudo class.
+                            <br>
+                            <br>
+                            With this approach, we avoid the use of JavaScript in order to add "loolike appearance", attach click event handlers, hide original inputs etc.
+                            <br>
+                            <br>
+                            Nowadays, SVG support is very good and can be used for various design tweaks and may be combined with <strong>::before</strong> &amp; <strong>::after</strong> pseudo selectors and thus get a nice final "look".
+                            <br>
+                            This is pretty safe to use on any project and much easier with <a href="http://postcss.org" target="_blank">PostCSS</a> &amp; <a href="http://cssnext.io" target="_blank">cssnext</a> ;)
+                            <br>
+                            <br>
+                            Available on <a href="https://github.com/millanbrankovic/custom-inputs" target="_blank">Github</a>
+                        </p>
+                    </div>
+
+                    <div class="content u-no-padding-t">
+                        <p class="u-medium-font-size">
+                            <a href="http://milanbrankovic.com" target="_blank">
+                                Milan Brankovic
+                            </a>
+                            UI Designer &amp; Front-end Developer
+                        </p>
+                        <ul class="list">
+                            <li class="list-item">
+                                <a href="https://www.linkedin.com/in/milanbrankovic" target="_blank">Linkedin</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="https://dribbble.com/millanbrankovic" target="_blank">Dribbble</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="https://github.com/millanbrankovic" target="_blank">Github</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="https://twitter.com/millanbrankovic" target="_blank">Twitter</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
     </body>
 </html>

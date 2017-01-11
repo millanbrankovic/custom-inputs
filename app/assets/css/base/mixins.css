@@ -1,0 +1,16 @@
+@define-mixin clearfix {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+@define-mixin gutters {
+    &::after {
+        content: '\00a0';
+        height: 0;
+        display: block;
+        visibility: hidden;
+    }
+}

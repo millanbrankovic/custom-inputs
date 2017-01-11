@@ -1,16 +1,14 @@
 {
-  "name": "boilerplate",
+  "name": "custom-inputs",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/millanbrankovic/boilerplate.git"
+    "url": "git+https://github.com/millanbrankovic/custom-inputs"
   },
   "author": "Milan Brankovic",
   "license": "ISC",
   "dependencies": {
-    "lazysizes": "^3.0.0-rc2",
-    "normalize.css": "^5.0.0",
-    "picturefill": "^3.0.2"
+    "normalize.css": "^5.0.0"
   },
   "devDependencies": {
     "@cedx/gulp-david": "^3.1.0",
@@ -21,7 +19,7 @@
     "gulp-imagemin": "^3.1.1",
     "gulp-postcss": "^6.2.0",
     "gulp-rev": "^7.1.2",
-    "gulp-sourcemaps": "^2.2.3",
+    "gulp-sourcemaps": "^1.9.1",
     "gulp-uglify": "^2.0.0",
     "gulp-usemin": "^0.3.27",
     "gulp-watch": "^4.3.11",

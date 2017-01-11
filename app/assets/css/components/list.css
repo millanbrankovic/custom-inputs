@@ -1,0 +1,11 @@
+.list {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: var(--body-font-medium);
+}
+
+.list-item {
+    margin-left: var(--gutter-medium);
+    margin-right: var(--gutter-medium);
+}

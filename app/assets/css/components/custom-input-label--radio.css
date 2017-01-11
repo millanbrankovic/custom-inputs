@@ -1,0 +1,57 @@
+.custom-input-label {
+    &--radio {
+        &::before {
+            content: "";
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            border: var(--border);
+            background-color: white;
+            border-radius: var(--radius-large);
+        }
+
+        &::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            top: 4px;
+            left: 4px;
+            opacity: 0;
+            position: absolute;
+            border-radius: var(--radius-large);
+            background-color: var(--brand-blue);
+        }
+    }
+}
+
+/**
+* The ".custom-input-input" class is part of custom-input.css file
+*/
+.custom-input-input {
+    &:checked {
+        + .custom-input-label {
+            &--radio {
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &[disabled] {
+        + .custom-input-label {
+            &--radio {
+                &::before {
+                    border-color: var(--brand-gray);
+                    background-color: var(--brand-gray);
+                }
+            }
+
+            &--radio {
+                &::after {
+                    background-color: var(--brand-lt-md-gray);
+                }
+            }
+        }
+    }
+}

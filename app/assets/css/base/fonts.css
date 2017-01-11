@@ -7,22 +7,22 @@
 */
 
 @font-face {
-    font-family: "Open Sans";
+    font-family: "Roboto Condensed";
     font-style: normal;
     font-weight: 300;
-    src: local("Open Sans Light"), local("OpenSans-Light"), url("/assets/fonts/OpenSans-Light.woff2") format("woff2"), url("/assets/fonts/OpenSans-Light.woff") format("woff");
+    src: local("Roboto Condensed Light"), local("RobotoCondensed-Light"), url("/assets/fonts/RobotoCondensed-Light.woff2") format("woff2"), url("/assets/fonts/RobotoCondensed-Light.woff") format("woff");
 }
 
 @font-face {
-    font-family: "Open Sans";
+    font-family: "Roboto Condensed";
     font-style: normal;
     font-weight: 400;
-    src: local("Open Sans Regular"), local("OpenSans-Regular"), url("/assets/fonts/OpenSans-Regular.woff2") format("woff2"), url("/assets/fonts/OpenSans-Regular.woff") format("woff");
+    src: local("Roboto Condensed Regular"), local("RobotoCondensed-Regular"), url("/assets/fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("/assets/fonts/RobotoCondensed-Regular.woff") format("woff");
 }
 
 @font-face {
-    font-family: "Open Sans";
+    font-family: "Roboto Condensed";
     font-style: normal;
     font-weight: 700;
-    src: local("Open Sans Bold"), local("OpenSans-Bold"), url("/assets/fonts/OpenSans-Bold.woff2") format("woff2"), url("/assets/fonts/OpenSans-Bold.woff") format("woff");
+    src: local("Roboto Condensed Bold"), local("RobotoCondensed-Bold"), url("/assets/fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("/assets/fonts/RobotoCondensed-Bold.woff") format("woff");
 }

@@ -8,9 +8,18 @@
 
 /* Components */
 @import "components/headings";
+@import "components/page";
 @import "components/header";
 @import "components/wrapper";
-@import "components/icon";
+@import "components/main";
+@import "components/section";
+@import "components/content";
+@import "components/grid";
+@import "components/list";
+@import "components/custom-input";
+@import "components/custom-input-label--check";
+@import "components/custom-input-label--slide";
+@import "components/custom-input-label--radio";
 @import "components/footer";
 
 /* Helpers */

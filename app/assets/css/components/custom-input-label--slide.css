@@ -1,0 +1,57 @@
+.custom-input-label {
+    &--slide {
+        width: 44px;
+        height: 14px;
+        border-radius: var(--radius-large);
+        background: var(--brand-md-lt-gray);
+
+        &::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            top: -3px;
+            left: 0;
+            position: absolute;
+            border-radius: var(--radius-large);
+            background-color: var(--brand-md-gray);
+        }
+    }
+}
+
+/**
+* The ".custom-input-input" class is part of custom-input.css file
+*/
+.custom-input-input {
+    &:checked {
+        + .custom-input-label {
+            &--slide {
+                background: var(--brand-lt-green);
+
+                &::before {
+                    left: 24px;
+                    background-color: var(--brand-green);
+                }
+            }
+        }
+    }
+
+    &[disabled] {
+        + .custom-input-label {
+            &--slide {
+                background-color: var(--brand-lt-md-gray);
+
+                &::before {
+                    background-color: var(--brand-md-lt-gray);
+                }
+            }
+        }
+
+        &:checked {
+            + .custom-input-label {
+                &--slide {
+                    opacity: .6
+                }
+            }
+        }
+    }
+}

@@ -12,7 +12,7 @@ body {
 }
 
 body {
-    color: var(--brand-gray);
+    color: var(--brand-dk-gray);
     font-family: var(--font-primary);
     font-size: var(--body-font-size);
     font-weight: var(--light-font);
@@ -25,18 +25,18 @@ img {
 }
 
 a {
-    color: var(--brand-gray);
+    color: var(--brand-blue);
     text-decoration: none;
     transition: var(--transition);
 
     &:hover,
     &:focus {
-        color: var(--brand-blue);
+        color: var(--brand-md-blue);
         text-decoration: none;
     }
 
     &:active {
-        color: var(--brand-blue);
+        color: var(--brand-md-blue);
     }
 
     &:focus {

@@ -1,0 +1,37 @@
+.custom-input {
+    position: relative;
+}
+
+.custom-input-input {
+    visibility: hidden;
+    position: absolute;
+
+    + .custom-input-label {
+        display: flex;
+        cursor: pointer;
+        user-select: none;
+        position: relative;
+
+        &::before,
+        &::after {
+            transition: var(--transition);
+        }
+    }
+
+    &[disabled] {
+        + .custom-input-label {
+            cursor: default;
+            pointer-events: none;
+
+            .custom-input-span {
+                color: var(--brand-gray);
+            }
+        }
+    }
+}
+
+.custom-input-span {
+    margin-left: var(--gutter-small);
+    font-size: var(--body-font-medium);
+    font-weight: var(--light-font);
+}
