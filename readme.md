@@ -1,6 +1,6 @@
 # Custom Inputs
 
-Default checkboxes and radio buttons are quite plain and their appearance can't be easily customized - at least it was the case in the past. Luckily, CSS3 offers a good solution - <a href="http://www.w3.org/TR/selectors/#checked" target="_blank">:checked</a> pseudo class.
+Default checkboxes and radio buttons are quite plain and their appearance can't be easily customized - at least it was the case in the past. Luckily, CSS offers a good solution - <a href="http://www.w3.org/TR/selectors/#checked" target="_blank">:checked</a> pseudo class.
 
 ##### Demo
 
@@ -45,7 +45,7 @@ Target `label` with an adjacent selector `+`.
     cursor: pointer;
     user-select: none;
     position: relative;
-    
+
     &::before,
     &::after {
         content: "";
@@ -111,7 +111,7 @@ The final step and the most important is `:checked` pseudo class.
 .custom-input-input {
     visibility: hidden;
     position: absolute;
-    
+
     + .custom-input-label {
         display: flex;
         cursor: pointer;
@@ -123,7 +123,7 @@ The final step and the most important is `:checked` pseudo class.
             content: "";
             transition: var(--transition);
         }
-        
+
         &--check {
             &::before {
                 width: 18px;
@@ -141,7 +141,7 @@ The final step and the most important is `:checked` pseudo class.
             }
         }
     }
-    
+
     &:checked {
         + .custom-input-label {
             &--check {
