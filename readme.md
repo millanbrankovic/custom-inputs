@@ -10,7 +10,7 @@ Demo is available [here](http://milanbrankovic.com/demos/custom-inputs)
 
 ####HTML
 
-For this example I was using the following markup:
+For this example I was using the following HTML markup:
 
 ```html
 <div class="custom-input">
