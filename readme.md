@@ -83,16 +83,18 @@ The final step and the most important is `:checked` pseudo class.
 
 ```css
 :checked {
-    + .custom-input-label--check {
-        &::before {
-            border-color: var(--brand-green);
-            background-color: var(--brand-green);
-        }
+    + .custom-input-label {
+        &--check {
+            &::before {
+                border-color: var(--brand-green);
+                background-color: var(--brand-green);
+            }
 
-        &::after {
-            width: 18px;
-            height: 18px;
-            background: svg-load("ico-checkmark.svg", fill: white) no-repeat center center;
+            &::after {
+                width: 18px;
+                height: 18px;
+                background: svg-load("ico-checkmark.svg", fill: white) no-repeat center center;
+            }
         }
     }
 }
