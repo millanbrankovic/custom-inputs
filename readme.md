@@ -58,20 +58,22 @@ Target `label` with an adjacent selector `+`.
 Next step is to target a `::before` and `::after` pseudo selectors and be creative as much as possible since these selectors will appear instead of the default checkboxes and radio buttons. Since I was using a BEM approach I added a modifier class `--check` to `.custom-input-label` and targeted its `::before` and `::after` selectors.
 
 ```css
-.custom-input-label--check {
-    &::before {
-        width: 18px;
-        height: 18px;
-        display: inline-block;
-        border: var(--border);
-        background-color: white;
-        border-radius: var(--radius);
-    }
+.custom-input-label {
+    &--check {
+        &::before {
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            border: var(--border);
+            background-color: white;
+            border-radius: var(--radius);
+        }
 
-    &::after {
-        top: 0;
-        left: 0;
-        position: absolute;
+        &::after {
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
     }
 }
 ```
