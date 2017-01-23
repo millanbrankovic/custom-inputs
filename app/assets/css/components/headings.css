@@ -5,8 +5,20 @@
         font-size: var(--h1-font-size-large);
     }
 
-    &--scalable {
-        font-size: calc(16px + (32 - 16) * ( (100vw - 320px) / (520 - 320) ));
+    &--hero {
+        font-size: var(--h1-font-size-hero);
+
+        @media (--medium) {
+            font-size: var(--h1-font-size-hero-medium);
+        }
+
+        @media (--large) {
+            font-size: var(--h1-font-size-hero-large);
+        }
+
+        @media (--desktop) {
+            font-size: var(--h1-font-size-hero-desktop);
+        }
     }
 }
 
