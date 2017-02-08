@@ -1,28 +1,20 @@
-/**
-* Custom web fonts
-*
-* The most important fonts should be preloadeded (rel="preload") in order to prevent Flash of Invisible Text:
-* https://www.zachleat.com/web/preload/
-*
-*/
-
 @font-face {
-    font-family: "Roboto Condensed";
+    font-family: "Roboto Cond";
     font-style: normal;
     font-weight: 300;
-    src: local("Roboto Condensed Light"), local("RobotoCondensed-Light"), url("/assets/fonts/RobotoCondensed-Light.woff2") format("woff2"), url("/assets/fonts/RobotoCondensed-Light.woff") format("woff");
+    src: local("Roboto Cond Light"), local("RobotoCond-Light"), url("/assets/fonts/RobotoCond-Light.woff2") format("woff2"), url("/assets/fonts/RobotoCond-Light.woff") format("woff");
 }
 
 @font-face {
-    font-family: "Roboto Condensed";
+    font-family: "Roboto Cond";
     font-style: normal;
     font-weight: 400;
-    src: local("Roboto Condensed Regular"), local("RobotoCondensed-Regular"), url("/assets/fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("/assets/fonts/RobotoCondensed-Regular.woff") format("woff");
+    src: local("Roboto Cond Regular"), local("RobotoCond-Regular"), url("/assets/fonts/RobotoCond-Regular.woff2") format("woff2"), url("/assets/fonts/RobotoCond-Regular.woff") format("woff");
 }
 
 @font-face {
-    font-family: "Roboto Condensed";
+    font-family: "Roboto Cond";
     font-style: normal;
     font-weight: 700;
-    src: local("Roboto Condensed Bold"), local("RobotoCondensed-Bold"), url("/assets/fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("/assets/fonts/RobotoCondensed-Bold.woff") format("woff");
+    src: local("Roboto Cond Bold"), local("RobotoCond-Bold"), url("/assets/fonts/RobotoCond-Bold.woff2") format("woff2"), url("/assets/fonts/RobotoCond-Bold.woff") format("woff");
 }
