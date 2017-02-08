@@ -4,8 +4,8 @@
     flex-wrap: wrap;
 
     &--gutters {
-        margin-top: -var(--gutter-thiny);
-        margin-left: -var(--gutter-thiny);
+        margin-top: -var(--gutter-tiny);
+        margin-left: -var(--gutter-tiny);
     }
 
 }
@@ -85,7 +85,7 @@
     position: relative;
 
     &--gutters {
-        padding: var(--gutter-thiny) 0 0 var(--gutter-thiny);
+        padding: var(--gutter-tiny) 0 0 var(--gutter-tiny);
     }
 
     &--flex {
